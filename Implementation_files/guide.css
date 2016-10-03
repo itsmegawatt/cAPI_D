@@ -2113,7 +2113,6 @@ Center Area
     overflow: hidden;
     position: relative;
     width: 46%;
-	font-weight: bold;
 }
 
 
@@ -2179,4 +2178,5 @@ Right Area
 .code {
 	padding: 5px 10px;
 	background-color: #404040;
+	border-radius: 10px;
 }
