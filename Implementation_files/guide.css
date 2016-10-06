@@ -2147,10 +2147,10 @@ Right Area
 }
 
 #language_selection {
-	word-spacing: 15px;
 	background-color: #404040;
 	padding-top: 10px;
 	padding-bottom: 1px;
+	padding-left: 15px;
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
@@ -2158,6 +2158,21 @@ Right Area
 	width: 48%;
 	color: #d3d3d3;
 	z-index: 1;
+}
+
+
+#language_selection input{
+	display: none;
+}
+
+#language_selection label {
+	padding: 5px 15px;
+	margin: 0;
+}
+
+#language_selection input[type="radio"]:checked + label {
+	padding: 5px 15px;
+	background-color: #0099cc;
 }
 
 .single_line_list li{

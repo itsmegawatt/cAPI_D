@@ -13,6 +13,9 @@
         <link href="Implementation_files/library_guide.css" rel="stylesheet">
         <link href="Implementation_files/guide.css" rel="stylesheet">
         <link href="Implementation_files/font-awesome.css" rel="stylesheet">
+        
+        <!-- Javascript for this template -->
+        <script type="text/javascript" src="Implementation_files/switch-tabs.js"></script>
     </head>
 
 
@@ -112,6 +115,7 @@
         <div id="main_area">
             
             <div id="language_selection">
+            	<!--
                 <ul class="single_line_list">
                     <li class="selected_language">curl</li>
                     <li>Ruby</li>
@@ -122,7 +126,26 @@
                     <li>Swift</li>
                     <li>C++</li>
                 </ul>
+                !-->
+                <input type="radio" name="language" id="curl" onclick="changeToCurl()" checked/>
+                <label for="curl">curl</label>
+                <input type="radio" name="language" id="ruby" onclick="changeToRuby()"/>
+                <label for="ruby">Ruby</label>
+                <input type="radio" name="language" id="python" onclick="changeToPython()"/>
+                <label for="python">Python</label>
+                <input type="radio" name="language" id="php" onclick="changeToPHP()" />
+                <label for="php">PHP</label>
+                <input type="radio" name="language" id="java" onclick="changeToJava()"/>
+                <label for="java">Java</label>
+                <input type="radio" name="language" id="node" onclick="changeToNode()"/>
+                <label for="node">Node</label>
+                <input type="radio" name="language" id="swift" onclick="changeToSwift()"/>
+                <label for="swift">Swift</label>
+                <input type="radio" name="language" id="cpp" onclick="changeToCpp()"/>
+                <label for="cpp">C++</label>
+                
             </div>
+        	
             
             <div class="api_group">
                 <div class="api_subgroup firstitem">
@@ -158,7 +181,7 @@
                         <p>The result of the forms webservice invocation is a collection of forms.</p>
                         <p>Form data and description:</p>
                		</div>
-                    <div class="api_groupright">
+                    <div class="api_groupright" id="forms_api_code">
                     	<p>&nbsp;</p>
                         <p>&nbsp;</p>
                         <p>&nbsp;</p>
@@ -213,7 +236,7 @@
                         <p>REST API call to pull all submissions for a specific account for the a 24 hours period (note: dates are inclusive and GMT based):</p>
                         <p>REST API call to pull all submissions for a specific account for the a 48 hours period (note: dates are inclusive and GMT based):</p>
                 	</div>
-               		<div class="api_groupright">
+               		<div class="api_groupright" id="submissions_api_code">
                     	<p>&nbsp;</p>
                         <p>&nbsp;</p>
                         <p>Submissions API URL:</p>
@@ -228,10 +251,10 @@
                             <span class="text_turquoise">&lt;TotalPages&gt;</span>1<span class="text_turquoise">&lt;/TotalPages&gt;</span><br />
                             <span class="text_turquoise">&lt;Submissions&gt;</span><br />
                             <span class="text_turquoise">&lt;Submission Id="1" Department="Test Department"&gt;</span><br />
-                            <span class="text_turquoise">&lt;UserName&gt;</span>chris.morrisette@gocanvas.com<span class="text_turquoise">&lt;/UserName&gt;</span><br />
-                            <span class="text_turquoise">&lt;FirstName&gt;</span>Chris<span class="text_turquoise">&lt;/FirstName&gt;</span><br />
-                            <span class="text_turquoise">&lt;LastName&gt;</span>Morrisette<span class="text_turquoise">&lt;/LastName&gt;</span><br />
-                            <span class="text_turquoise">&lt;ResponseID&gt;</span>258aaa53-7762-4e58-bb88-f40490c63556<span class="text_turquoise">&lt;/ResponseID&gt;</span><br />
+                            <span class="text_turquoise">&lt;UserName&gt;</span>test@test.com<span class="text_turquoise">&lt;/UserName&gt;</span><br />
+                            <span class="text_turquoise">&lt;FirstName&gt;</span>Test<span class="text_turquoise">&lt;/FirstName&gt;</span><br />
+                            <span class="text_turquoise">&lt;LastName&gt;</span>Tester<span class="text_turquoise">&lt;/LastName&gt;</span><br />
+                            <span class="text_turquoise">&lt;ResponseID&gt;</span>258aaa53-77aa2-4e58-bb88-f404dd363fff3<span class="text_turquoise">&lt;/ResponseID&gt;</span><br />
                             <span class="text_turquoise">&lt;Date&gt;</span>2009.08.31 20:20:17<span class="text_turquoise">&lt;/Date&gt;</span><br />
                             <span class="text_turquoise">&lt;DeviceDate&gt;</span>2009.08.31 20:20:17<span class="text_turquoise">&lt;/DeviceDate&gt;</span><br />
                             <span class="text_turquoise">&lt;Form Id="1"&gt;</span><br />
@@ -317,14 +340,14 @@
                         <h2>Examples</h2>
                         <p><a href="https://www.gocanvas.com/apiv2/images.xml?image_id=1&amp;username=test@gocanvas.com&amp;password=test">https://www.gocanvas.com/apiv2/images.xml?image_id=1&amp;username=test@gocanvas.com&amp;password=test</a></p>
                 	</div>
-               		<div class="api_groupright">
+               		<div class="api_groupright" id="images_api_code">
                     	<p>&nbsp;</p>
                         <p>&nbsp;</p>
                         <p>&nbsp;</p>
                         <p>Images API URL:</p>
                         <p class="code">https://www.gocanvas.com/apiv2/images.xml</p>
                         <p>REST API Call Example:</p>
-                        <p class="code">https://www.gocanvas.com/apiv2/images.xml?image_id=1&username=test@gocanvas.com&password=test</p>
+                        <p class="code">https://www.gocanvas.com/apiv2/images.xml?image_id=1&username=test@test.com&password=test</p>
                         <p>&nbsp;</p>
                         <p>Resulting image:</p><br>
 						<center>
@@ -369,7 +392,7 @@
                         <p>Post Payload to replace the data in Group2:</p>
                         <p>Post Payload to append new data to existing or new user groups:</p>
                 	</div>
-               		<div class="api_groupright">
+               		<div class="api_groupright" id="reference_data_api_code">
                     	<p>&nbsp;</p>
                         <p>&nbsp;</p>
                         <p>&nbsp;</p>
@@ -460,7 +483,7 @@
                         <p>REST API call to pull all submissions for a specific account:</p>
                         <p>Resulting XML:</p>
                 	</div>
-               		<div class="api_groupright">
+               		<div class="api_groupright" id="csv_meta_data_api_code">
                     	<p>&nbsp;</p>
                         <p>&nbsp;</p>
                         <p>&nbsp;</p>
@@ -527,7 +550,7 @@
                         <p>Post Payload with Dispatch List:</p>
                         <p>Resulting XML:</p>
                 	</div>
-               		<div class="api_groupright">
+               		<div class="api_groupright" id="csv_api_code">
                     	<p>&nbsp;</p>
                         <p>&nbsp;</p>
                         <p>&nbsp;</p>
@@ -573,7 +596,7 @@
                         <h2>Examples</h2>
                         <p>REST API call to pull all submissions for a specific account:</p>
                 	</div>
-               		<div class="api_groupright">
+               		<div class="api_groupright" id="dispatch_items_api_code">
                     	<p>&nbsp;</p>
                         <p>&nbsp;</p>
                         <p>&nbsp;</p>
@@ -667,7 +690,7 @@
                         <p>Once you've provided a URL (and, optionally, a tag), click the "Test" button. Canvas will send some sample metadata to the URL you've defined, and display the response for you so that you can see how your web service responded to the posted data. Canvas will display the status code, headers, and response body - if any - that we received from your web service. You can use this to determine whether your service is working as intended and make adjustments if you need to.</p>
                         <p>When you're satisfied that your service is responding as you intended, go ahead and hit the "Save" button to start receiving notifications when submissions are uploaded.</p>
                 	</div>
-               		<div class="api_groupright">
+               		<div class="api_groupright" id="submission_push_notifications_api_code">
                     	<p>&nbsp;</p>
                         <p>&nbsp;</p>
                         <p>&nbsp;</p>
@@ -713,7 +736,7 @@ be contained within an XML document as the body of the HTTP POST. Here's an exam
                         <p>Example of an invalid webservice invocation (missing the required "id" parameter)</p>
                         <p>Result:</p>
                 	</div>
-               		<div class="api_groupright">
+               		<div class="api_groupright" id="error_codes_api_code">
                     	<p>&nbsp;</p>
                         <p>&nbsp;</p>
                         <p>&nbsp;</p>
