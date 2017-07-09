@@ -2170,6 +2170,10 @@ Right Area
 	margin: 0;
 }
 
+#language_selection label:hover {
+	cursor: pointer;
+}
+
 #language_selection input[type="radio"]:checked + label {
 	padding: 5px 15px;
 	background-color: #0099cc;
