@@ -1,0 +1,296 @@
+<html lang="en"><head>
+  <title>Canvas API</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 100%}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+	
+	
+	/*** custom media query css ***/
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .row-eq-height {
+    display: block;
+  }
+ .col-half-offset{
+    margin-left:0%
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .row-eq-height {
+    display: flex;
+  }
+    .col-half-offset{
+    margin-left:4.166666667%
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .row-eq-height {
+    display: flex;
+  }
+     .col-half-offset{
+    margin-left:4.166666667%
+    }
+}
+@media (min-width: 1200px) {
+  .row-eq-height {
+    display: flex;
+  }
+    .col-half-offset{
+    margin-left:4.166666667%
+    }
+}
+
+.sidenav {
+    padding-top: 5px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 240px;
+}
+.rhtsidenav {
+    /* position: inherit; */
+    /* right: 0px; */
+    /* left: inherit; */
+    /* height: 100%; */
+    background-color: #f1f1f1;
+    padding-top: 20px;
+}
+.main-container {
+    margin-left: 240px;
+    /* clear: both; */
+}
+
+.link_group {
+    list-style: none;
+    list-style-type: none;
+    list-style-position: initial;
+    list-style-image: initial;
+}
+.blue_link {
+    color: #0099cc;
+    margin-left: 20px;
+}
+
+  </style>
+</head>
+<body>
+
+
+  
+<div class="container-fluid text-center">    
+
+  <div class="sidenav">
+  <div id="sidebar">
+      <div class="clearfix">
+      <img src="Images/canvas-logo.png" id="canvas_logo" class="navbar-left" style="padding-left: 20px; width: 90px; height: 50px;" />
+      </div>
+        	<br>
+
+            <div id="sidebar_links" class="text-left" style="margin-left: 40px; overflow-y: scroll; height: 100%"">
+            	<ul class="link_group list-unstyled">
+                    <li class="teal_link"><a href="#apioverview">Webservices API Overview</a></li>
+                </ul>
+            
+                <ul class="link_group list-unstyled">
+                    <li class="teal_link">Forms API</li>
+                    <li class="blue_link"><a href="#forms1">Description</a></li>
+                    <li class="blue_link"><a href="#forms2">URL</a></li>
+                    <li class="blue_link"><a href="#forms3">Parameters</a></li>
+                    <li class="blue_link"><a href="#forms4">Results</a></li>
+                </ul>
+                
+                <ul class="link_group list-unstyled">
+                    <li class="teal_link"><a href="#submissions">Submissions API</a></li>
+                    <li class="blue_link"><a href="#submissions1">Description</a></li>
+                    <li class="blue_link"><a href="#submissions2">URL</a></li>
+                    <li class="blue_link"><a href="#submissions3">Parameters</a></li>
+                    <li class="blue_link"><a href="#submissions4">Results</a></li>
+                    <li class="blue_link"><a href="#submissions5">Examples</a></li>
+                </ul>
+                
+                <ul class="link_group list-unstyled">
+                    <li class="teal_link"><a href="#images">Images API</a></li>
+                    <li class="blue_link"><a href="#images1">Description</a></li>
+                    <li class="blue_link"><a href="#images2">URL</a></li>
+                    <li class="blue_link"><a href="#images3">Parameters</a></li>
+                    <li class="blue_link"><a href="#images4">Results</a></li>
+                    <li class="blue_link"><a href="#images5">Examples</a></li>
+                </ul>
+                
+                <ul class="link_group list-unstyled">
+                    <li class="teal_link"><a href="#referencedata">Reference Data API</a></li>
+                    <li class="blue_link"><a href="#referencedata1">Description</a></li>
+                    <li class="blue_link"><a href="#referencedata2">URL</a></li>
+                    <li class="blue_link"><a href="#referencedata3">Parameters</a></li>
+                    <li class="blue_link"><a href="#referencedata4">Payload</a></li>
+                    <li class="blue_link"><a href="#referencedata5">Results</a></li>
+                    <li class="blue_link"><a href="#referencedata6">Examples</a></li>
+                </ul>
+                
+                <ul class="link_group list-unstyled">
+                    <li class="teal_link"><a href="#csvmetadata">CSV Meta Data API</a></li>
+                    <li class="blue_link"><a href="#csvmetadata1">Description</a></li>
+                    <li class="blue_link"><a href="#csvmetadata2">URL</a></li>
+                    <li class="blue_link"><a href="#csvmetadata3">Parameters</a></li>
+                    <li class="blue_link"><a href="#csvmetadata4">Results</a></li>
+                    <li class="blue_link"><a href="#csvmetadata5">Examples</a></li>
+                </ul>
+                
+                <ul class="link_group list-unstyled">
+                    <li class="teal_link"><a href="#csv">CSV API</a></li>
+                    <li class="blue_link"><a href="#csv1">Description</a></li>
+                    <li class="blue_link"><a href="#csv2">URL</a></li>
+                    <li class="blue_link"><a href="#csv3">Parameters</a></li>
+                    <li class="blue_link"><a href="#csv4">Payload</a></li>
+                    <li class="blue_link"><a href="#csv5">Results</a></li>
+                    <li class="blue_link"><a href="#csv6">Examples</a></li>
+                </ul>
+                
+                <ul class="link_group list-unstyled">
+                    <li class="teal_link"><a href="#dispatch">Dispatch Items API</a></li>
+                    <li class="blue_link"><a href="#dispatch1">Description</a></li>
+                    <li class="blue_link"><a href="#dispatch2">URL</a></li>
+                    <li class="blue_link"><a href="#dispatch3">Parameters</a></li>
+                    <li class="blue_link"><a href="#dispatch4">Results</a></li>
+                    <li class="blue_link"><a href="#dispatch5">Examples</a></li>
+                </ul>
+                
+                <ul class="link_group list-unstyled">
+                    <li class="teal_link"><a href="#push">Submission Push Notification API</a></li>
+                    <li class="blue_link"><a href="#push1">Description</a></li>
+                    <li class="blue_link"><a href="#push2">URL</a></li>
+                    <li class="blue_link"><a href="#push3">What Canvas Sends to Your Service</a></li>
+                    <li class="blue_link"><a href="#push4">Implementation Notes</a></li>
+                    <li class="blue_link"><a href="#push5">Setting Up</a></li>
+                </ul>
+                
+                <ul class="link_group list-unstyled">
+                    <li class="teal_link"><a href="#error">Error Codes</a></li>
+                    <li class="blue_link"><a href="#error1">Description</a></li>
+                    <li class="blue_link"><a href="#error2">Results</a></li>
+                    <li class="blue_link"><a href="#error3">Server Response Code</a></li>
+                    <li class="blue_link"><a href="#error4">Examples</a></li>
+                </ul>
+
+</div>
+</div>
+
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+    </div>
+<div class="clearfix main-container row row-eq-height">
+    
+    <div class="col-sm-6 text-left"> 
+     <a name="apioverview"></a>
+                        <h1>Canvas Webservices API Overview</h1>
+                        <p>The Canvas webservices API provides programmatic access to data hosted within Canvas using asecure, simple and powerful application programming interface (API). The Canvas webservices API is centered around the REST style webservices interface. The goal of the Canvas webservice API is to allow Canvas customers to automate the integration of data submitted to the Canvas servers back into other systems.</p>
+<div class="api_groupright">
+                      <p>&nbsp;</p>
+                      <p>Offline Version of the API is available <a href="#">here</a></p>
+                    </div>
+<a name="forms"></a>
+                        <h1>Forms API</h1>
+                        <a name="forms1"></a>
+                        <h2>Description</h2>
+                        <p>The Forms API provides the capability to retrieve all or a subset of forms associated with the specified login.</p>
+                        <a name="forms2"></a>
+                        <h2>URL</h2>
+                        <p>Since this API call and results could potentially contain sensitive information, it is required to be accessed over SSL via HTTPS.</p>
+                        <p>Forms API URL: <a href="https://www.gocanvas.com/apiv2/forms.xml">https://www.gocanvas.com/apiv2/forms.xml</a></p>
+                        <a name="forms3"></a>
+                        <h2>Parameters</h2>
+                        <p>The Forms API is restricted to authenticated users and requires a username and password to access. All other parameters are optional. When no parameters are specified, a list of all forms applicable for that user is returned. If Departments is enabled, and if a department isn't specified, it will return the forms from the default department, otherwise you can pass in the name of the department to pull the forms for that department.</p>
+                        <a name="forms4"></a>
+                        <h2>Results</h2>
+                        <p>The result of the forms webservice invocation is a collection of forms.</p>
+                        <p>Form data and description:</p>
+
+      <h1>Forms API</h1>
+	  <h2>Description</h2>
+      <p>The Forms API provides the capability to retrieve all or a subset of forms associated with the specified login.</p>
+	  <h2>URL</h2>
+      <p>Since this API call and results could potentially contain sensitive information, it is required to be accessed over SSL via HTTPS.</p>
+	  <p>Forms API URL: <a href="https://www.gocanvas.com/apiv2/forms.xml">https://www.gocanvas.com/apiv2/forms.xm</a></p>
+	  
+	  <h2>Parameters</h2>
+      <p>The Forms API is restricted to authenticated users and requires a username and password to access. All other parameters are optional. When no parameters are specified, a list of all forms applicable for that user is returned. If Departments is enabled, and if a department isn't specified, it will return the forms from the default department, otherwise you can pass in the name of the department to pull the forms for that department.</p>
+	  
+	  <h2>Results</h2>
+	  <p>The result of the forms webservice invocation is a collection of forms.
+	  </p><p>Form data and description:</p>
+	  <br><br>
+	  
+	  <h1>Submissions API</h1>
+	   <h2>Description</h2>
+	   <p>The Forms API provides the capability to retrieve all or a subset of forms associated with the specified login.</p>
+	   <h2>URL</h2>
+      <p>Since this API call and results could potentially contain sensitive information, it is required to be accessed over SSL via HTTPS.</p>
+	  <p>Forms API URL: <a href="https://www.gocanvas.com/apiv2/forms.xml">https://www.gocanvas.com/apiv2/forms.xm</a></p>
+	  <h2>Parameters</h2>
+      <p>The Submissions API is restricted to authenticated users and requires a username and password to access. At least one parameter must be specified to limit the result to either a specific form or subset of forms via the form_name, search_form_name or form_id parameters. If a 'begin_date' is specified, a 'end_date' must also be specified. If a 'begin_second' is specified, a 'end_second' must also be specified. Results will be limited to 100 submissions per request. The 'page' parameter specifies which group of results to return. It will default to 1 if it is not specified. The total number of pages is returned in the result. If Departments is enabled, and if a department isn't specified, it will return the submissions from the default department, otherwise you can pass in the name of the department to pull the submissions in the department. Account reporters will download all submissions if they don't specify departments.</p>
+	  <a name="forms1"></a>
+	  <h2>Results</h2>
+	  <p>The results of the submissions webservice invocation is a collection of submissions. Each submission contains a simplified form structure and can contain a collection of sections. Each section can contain a collection of sheets. Each sheet can contain a collection of responses. In addition, if a sheet is a list (either advanced or simple) it can contain a collection of responsegroups. A responsegroup simply contains the data entered in the list and a section containing the addition sheets and responses.
+	  </p><p>Submission data and descriptions:</p>
+	  <p>Form data and description:</p>
+	  <p>Section data and descriptions</p>
+	  <p>Sheet data and description:</p>
+	  <p>Response data and description:</p>
+    </div>
+	 
+
+    <div class="col-sm-6 rhtsidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+
+
+</body></html>
