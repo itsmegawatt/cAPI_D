@@ -5,7 +5,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js\Webpage_bootstrap_JS\webpage_bootstrap.js"></script>
   <style>
+  
     /* Remove the navbar's default margin-bottom and rounded borders test comment */ 
     .navbar {
       margin-bottom: 0;
@@ -86,8 +88,9 @@
     /* right: 0px; */
     /* left: inherit; */
     /* height: 100%; */
-    background-color: #f1f1f1;
-    padding-top: 20px;
+    background-color: #666;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 .main-container {
     margin-left: 240px;
@@ -103,7 +106,43 @@
     color: #0099cc;
     margin-left: 20px;
 }
+.language_selection {
+  background-color: #404040;
+    height: 7% !important;
+  }
+  .language_selection input{
+  display: none;
+  }
+  .language_selection label {
+    padding-top: 22px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+  }
+  .wells {
+    margin-bottom: 20px;
+  }
+  .language_selection input[type="radio"]:checked + label {
+    padding: 5px 15px;
+    background-color: #0099cc;
+}
+.code {
+    padding: 5px 10px;
+    background-color: #404040;
+    border-radius: 10px;
+    color: #d3d3d3;
+    text-align: left;
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.api_header {
+    color: #d3d3d3;
+    padding-left: 10px;
+  }
   </style>
+}
+}
 </head>
 <body>
 
@@ -244,6 +283,7 @@
                         <p>Form data and description:</p>
                   </div>
                     
+
                  </div>
             </div>
 <div class="api_group">
@@ -496,11 +536,58 @@
 
     </div>
     <div class="col-sm-6 rhtsidenav">
-      <div class="well">
-        <p>ADS</p>
+      <div class="wells">
+       <div class="language_selection">
+              
+                <input type="radio" name="language" id="curl" onclick="changeToCurl()" checked/>
+                <label for="curl" style="color: #d3d3d3">curl</label>
+                <input type="radio" name="language" id="ruby" onclick="changeToRuby()"/>
+                <label for="ruby" style="color: #d3d3d3">Ruby</label>
+                <input type="radio" name="language" id="python" onclick="changeToPython()"/>
+                <label for="python" style="color: #d3d3d3">Python</label>
+                <input type="radio" name="language" id="php" onclick="changeToPHP()" />
+                <label for="php" style="color: #d3d3d3">PHP</label>
+                <input type="radio" name="language" id="java" onclick="changeToJava()"/>
+                <label for="java" style="color: #d3d3d3">Java</label>
+                <input type="radio" name="language" id="node" onclick="changeToNode()"/>
+                <label for="node" style="color: #d3d3d3">Node</label>
+                <input type="radio" name="language" id="swift" onclick="changeToSwift()"/>
+                <label for="swift" style="color: #d3d3d3">Swift</label>
+                <input type="radio" name="language" id="cpp" onclick="changeToCpp()"/>
+                <label for="cpp" style="color: #d3d3d3">C++</label>
+                
+            </div>
       </div>
-      <div class="well">
-        <p>ADS</p>
+      <div class="wells">
+       <div class="api_groupright" id="forms_api_code">
+       <div class="api_groupright">
+                      <p>&nbsp;</p>
+                      <p class="text-left api_header">Offline Version of the API is available <a href="#">here</a></p>
+                    </div>
+
+                      <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p><p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p class="api_header text-left">Forms API URL:</p>
+                        <p class="code">https://www.gocanvas.com/apiv2/forms.xml</p>
+                        <p class="text-left api_header">REST API Call Example:</p>
+                        <p class="code">https://www.gocanvas.com/apiv2/forms.xml?username=test@test.com&password=test_password</p>
+                        <p>&nbsp;</p>
+                        <p class="text-left api_header">Resulting XML:</p>
+                        <p class="code">
+                            <span class="text_turquoise">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br />
+                            <span class="text_turquoise">&lt;CanvasResult&gt;</span><br />
+                            <span class="text_turquoise">&lt;Forms&gt;</span><br />
+                            <span class="text_turquoise">&lt;Form Id="1" OriginatingLibraryTemplateId="" GUID="f6167220-a09d-11df-8e32-
+                            00242bb0cd70"&gt;</span><br />
+                            <span class="text_turquoise">&lt;Name&gt;</span>test form<span class="text_turquoise">&lt;/Name&gt;</span><br />
+                            <span class="text_turquoise">&lt;Status&gt;</span>published<span class="text_turquoise">&lt;/Status&gt;</span><br />
+                            <span class="text_turquoise">&lt;Version&gt;</span>1<span class="text_turquoise">&lt;/Version&gt;</span><br />
+                            <span class="text_turquoise">&lt;/Form&gt;</span>
+                        </p>
+                    </div>
       </div>
     </div>
   </div>
