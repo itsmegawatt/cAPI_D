@@ -3,14 +3,14 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class ImagesAPI {
+public class ReferenceDataAPI {
 
-	public String call(String url, String image_Id, String username, String password) {
+	public String call(String url, String username, String password) {
 
 		StringBuilder stringBuilder = new StringBuilder();
 
 		try {
-			String apiUrl = url + "?image_id=" + image_Id + "&username=" + username + "&password="
+			String apiUrl = url + "?username=" + username + "&password="
 					+ password;
 			URL obj = new URL(apiUrl);
 			HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
@@ -31,12 +31,11 @@ public class ImagesAPI {
 
 	public static void main(String[] args) {
 
-		ImagesAPI imagesAPI = new ImagesAPI();
-		String url = "https://www.gocanvas.com/apiv2/images.xml";
-		String image_Id = "1";
+		ReferenceDataAPI referenceDataAPI = new ReferenceDataAPI();
+		String url = "https://www.gocanvas.com/apiv2/reference_datas";
 		String username = "taukeerahmed.knmiet@gmail.com";
 		String password = "abc123";
-		String outputXml=imagesAPI.call(url, image_Id, username, password);
+		String outputXml=referenceDataAPI.call(url, username, password);
 		System.out.println("xml response: "+outputXml);
 
 	}
