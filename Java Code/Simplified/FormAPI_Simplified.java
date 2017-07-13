@@ -9,7 +9,7 @@ public class FormAPI_Simplified {
 	public static void main(String[] args) {
 		StringBuilder stringBuilder = new StringBuilder();
 		try {
-			String apiUrl = URLEncoder.encode("https://www.gocanvas.com/apiv2/forms.xml?username=taukeerahmed.knmiet@gmail.com&password=abc123","UTF-8");
+			String apiUrl = URLEncoder.encode("https://www.gocanvas.com/apiv2/forms.xml?username=test@test.com&password=test123","UTF-8");
 			URL obj = new URL(apiUrl);
 			HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
 			conn.setDoOutput(true);

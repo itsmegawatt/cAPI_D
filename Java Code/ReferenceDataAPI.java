@@ -8,7 +8,6 @@ public class ReferenceDataAPI {
 	public String call(String url, String username, String password) {
 
 		StringBuilder stringBuilder = new StringBuilder();
-
 		try {
 			String apiUrl = url + "?username=" + username + "&password="
 					+ password;
@@ -16,13 +15,12 @@ public class ReferenceDataAPI {
 			HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
 			conn.setDoOutput(true);
 			conn.setRequestMethod("GET");
-
-			BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+			BufferedReader br = new BufferedReader(new InputStreamReader(
+					conn.getInputStream()));
 			String l = null;
-			while (( l=br.readLine()) != null) {
+			while ((l = br.readLine()) != null) {
 				stringBuilder.append(l);
 			}
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -30,14 +28,11 @@ public class ReferenceDataAPI {
 	}
 
 	public static void main(String[] args) {
-
 		ReferenceDataAPI referenceDataAPI = new ReferenceDataAPI();
 		String url = "https://www.gocanvas.com/apiv2/reference_datas";
-		String username = "taukeerahmed.knmiet@gmail.com";
-		String password = "abc123";
-		String outputXml=referenceDataAPI.call(url, username, password);
-		System.out.println("xml response: "+outputXml);
-
+		String username = "test@test.com";
+		String password = "test123";
+		String outputXml = referenceDataAPI.call(url, username, password);
+		System.out.println("xml response: " + outputXml);
 	}
-
 }

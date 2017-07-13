@@ -8,7 +8,7 @@ public class ReferenceDataAPI_Simplified {
 	public static void main(String[] args) {
 		StringBuilder stringBuilder = new StringBuilder();
 		try {
-			String apiUrl = "https://www.gocanvas.com/apiv2/reference_datas?username=taukeerahmed.knmiet@gmail.com&password=abc123";
+			String apiUrl = "https://www.gocanvas.com/apiv2/reference_datas?username=test@test.com&password=test123";
 			URL obj = new URL(apiUrl);
 			HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
 			conn.setDoOutput(true);

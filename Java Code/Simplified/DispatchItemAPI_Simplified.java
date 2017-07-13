@@ -8,7 +8,7 @@ public class DispatchItemAPI_Simplified {
 	public static void main(String[] args) {
 		StringBuilder stringBuilder = new StringBuilder();
 		try {
-			String apiUrl = "https://www.gocanvas.com/apiv2/dispatch_items?username=taukeerahmed.knmiet@gmail.com&password=abc123&form_id=1&begin_second=962461752&end_second=1593613752";
+			String apiUrl = "https://www.gocanvas.com/apiv2/dispatch_items?username=test@test.com&password=test123&form_id=1&begin_second=962461752&end_second=1593613752";
 			URL obj = new URL(apiUrl);
 			HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
 			conn.setDoOutput(true);

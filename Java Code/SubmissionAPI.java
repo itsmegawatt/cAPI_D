@@ -8,7 +8,6 @@ public class SubmissionAPI {
 	public String call(String url, String username, String password) {
 
 		StringBuilder stringBuilder = new StringBuilder();
-
 		try {
 			String apiUrl = url + "?username=" + username + "&password="
 					+ password;
@@ -17,12 +16,12 @@ public class SubmissionAPI {
 			conn.setDoOutput(true);
 			conn.setRequestMethod("GET");
 
-			BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+			BufferedReader br = new BufferedReader(new InputStreamReader(
+					conn.getInputStream()));
 			String l = null;
-			while (( l=br.readLine()) != null) {
+			while ((l = br.readLine()) != null) {
 				stringBuilder.append(l);
 			}
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -30,14 +29,11 @@ public class SubmissionAPI {
 	}
 
 	public static void main(String[] args) {
-
 		SubmissionAPI submissionAPI = new SubmissionAPI();
 		String url = "https://www.gocanvas.com/apiv2/submissions.xml";
-		String username = "taukeerahmed.knmiet@gmail.com";
-		String password = "abc123";
-		String outputXml=submissionAPI.call(url, username, password);
-		System.out.println("xml response: "+outputXml);
-
+		String username = "test@test.com";
+		String password = "test123";
+		String outputXml = submissionAPI.call(url, username, password);
+		System.out.println("xml response: " + outputXml);
 	}
-
 }
