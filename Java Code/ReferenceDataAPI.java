@@ -3,7 +3,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class FormAPI {
+public class ReferenceDataAPI {
 
 	public String call(String url, String username, String password) {
 
@@ -15,7 +15,6 @@ public class FormAPI {
 			HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
 			conn.setDoOutput(true);
 			conn.setRequestMethod("GET");
-
 			BufferedReader br = new BufferedReader(new InputStreamReader(
 					conn.getInputStream()));
 			String l = null;
@@ -29,11 +28,11 @@ public class FormAPI {
 	}
 
 	public static void main(String[] args) {
-		FormAPI formAPI = new FormAPI();
-		String url = "https://www.gocanvas.com/apiv2/forms.xml";
+		ReferenceDataAPI referenceDataAPI = new ReferenceDataAPI();
+		String url = "https://www.gocanvas.com/apiv2/reference_datas";
 		String username = "test@test.com";
 		String password = "test123";
-		String outputXml = formAPI.call(url, username, password);
+		String outputXml = referenceDataAPI.call(url, username, password);
 		System.out.println("xml response: " + outputXml);
 	}
 }

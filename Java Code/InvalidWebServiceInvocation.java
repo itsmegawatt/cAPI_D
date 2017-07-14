@@ -3,7 +3,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class FormAPI {
+public class InvalidWebServiceInvocation {
 
 	public String call(String url, String username, String password) {
 
@@ -15,11 +15,9 @@ public class FormAPI {
 			HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
 			conn.setDoOutput(true);
 			conn.setRequestMethod("GET");
-
-			BufferedReader br = new BufferedReader(new InputStreamReader(
-					conn.getInputStream()));
+			BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
 			String l = null;
-			while ((l = br.readLine()) != null) {
+			while (( l=br.readLine()) != null) {
 				stringBuilder.append(l);
 			}
 		} catch (Exception e) {
@@ -27,13 +25,12 @@ public class FormAPI {
 		}
 		return stringBuilder.toString();
 	}
-
 	public static void main(String[] args) {
-		FormAPI formAPI = new FormAPI();
-		String url = "https://www.gocanvas.com/apiv2/forms.xml";
+		InvalidWebServiceInvocation csvAPI = new InvalidWebServiceInvocation();
+		String url = "https://www.gocanvas.com/apiv2/images.xml";
 		String username = "test@test.com";
 		String password = "test123";
-		String outputXml = formAPI.call(url, username, password);
-		System.out.println("xml response: " + outputXml);
+		String outputXml=csvAPI.call(url, username, password);
+		System.out.println("xml response: "+outputXml);
 	}
 }
