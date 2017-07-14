@@ -3,7 +3,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class FormAPI {
+public class SubmissionAPI {
 
 	public String call(String url, String username, String password) {
 
@@ -29,11 +29,11 @@ public class FormAPI {
 	}
 
 	public static void main(String[] args) {
-		FormAPI formAPI = new FormAPI();
-		String url = "https://www.gocanvas.com/apiv2/forms.xml";
+		SubmissionAPI submissionAPI = new SubmissionAPI();
+		String url = "https://www.gocanvas.com/apiv2/submissions.xml";
 		String username = "test@test.com";
 		String password = "test123";
-		String outputXml = formAPI.call(url, username, password);
+		String outputXml = submissionAPI.call(url, username, password);
 		System.out.println("xml response: " + outputXml);
 	}
 }

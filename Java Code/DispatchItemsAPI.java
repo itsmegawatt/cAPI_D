@@ -3,19 +3,21 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class FormAPI {
+public class DispatchItemsAPI {
 
-	public String call(String url, String username, String password) {
+	public String call(String url, String username, String password,
+			String form_Id, String begin_second, String end_second) {
 
 		StringBuilder stringBuilder = new StringBuilder();
 		try {
 			String apiUrl = url + "?username=" + username + "&password="
-					+ password;
+					+ password + "&form_id=" + form_Id + "&begin_second="
+					+ begin_second + "&end_second=" + end_second;
+			System.out.println("xml request: " + apiUrl);
 			URL obj = new URL(apiUrl);
 			HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
 			conn.setDoOutput(true);
 			conn.setRequestMethod("GET");
-
 			BufferedReader br = new BufferedReader(new InputStreamReader(
 					conn.getInputStream()));
 			String l = null;
@@ -29,11 +31,15 @@ public class FormAPI {
 	}
 
 	public static void main(String[] args) {
-		FormAPI formAPI = new FormAPI();
-		String url = "https://www.gocanvas.com/apiv2/forms.xml";
+		DispatchItemsAPI dispatchItemsAPI = new DispatchItemsAPI();
+		String url = "https://www.gocanvas.com/apiv2/dispatch_items";
 		String username = "test@test.com";
 		String password = "test123";
-		String outputXml = formAPI.call(url, username, password);
+		String form_Id = "1";
+		String begin_second = "962461752";
+		String end_second = "1593613752";
+		String outputXml = dispatchItemsAPI.call(url, username, password,
+				form_Id, begin_second, end_second);
 		System.out.println("xml response: " + outputXml);
 	}
 }

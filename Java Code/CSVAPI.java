@@ -3,19 +3,20 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class FormAPI {
+public class CSVAPI {
 
-	public String call(String url, String username, String password) {
+	public String call(String url, String username, String password,
+			String form_Id, String begin_second, String end_second) {
 
 		StringBuilder stringBuilder = new StringBuilder();
 		try {
 			String apiUrl = url + "?username=" + username + "&password="
-					+ password;
+					+ password + "&form_id=" + form_Id + "&begin_second="
+					+ begin_second + "&end_second=" + end_second;
 			URL obj = new URL(apiUrl);
 			HttpURLConnection conn = (HttpURLConnection) obj.openConnection();
 			conn.setDoOutput(true);
 			conn.setRequestMethod("GET");
-
 			BufferedReader br = new BufferedReader(new InputStreamReader(
 					conn.getInputStream()));
 			String l = null;
@@ -29,11 +30,15 @@ public class FormAPI {
 	}
 
 	public static void main(String[] args) {
-		FormAPI formAPI = new FormAPI();
-		String url = "https://www.gocanvas.com/apiv2/forms.xml";
+		CSVAPI csvAPI = new CSVAPI();
+		String url = "https://www.gocanvas.com/apiv2/csv.xml";
 		String username = "test@test.com";
 		String password = "test123";
-		String outputXml = formAPI.call(url, username, password);
+		String form_Id = "1";
+		String begin_second = "962461752";
+		String end_second = "1593613752";
+		String outputXml = csvAPI.call(url, username, password, form_Id,
+				begin_second, end_second);
 		System.out.println("xml response: " + outputXml);
 	}
 }
