@@ -1,437 +1,424 @@
-<html lang="en"><head>
-  <title>Canvas API</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="js\Webpage_bootstrap_JS\webpage_bootstrap.js"></script>
-  <link rel="stylesheet" type="text/css" href="css\webpage_css.css">
-}
-}
-</head>
-<body>
+<html lang="en">
+    <head>
+        <title>Canvas API Documentation</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="js\Webpage_bootstrap_JS\webpage_bootstrap.js"></script>
+        <link rel="stylesheet" type="text/css" href="css\webpage_css.css">
+        <link rel="stylesheet" type="text/css" href="css\webpage_css.css">
+    </head>
 
+    <body>
+        <div class="container-fluid text-center">
 
-  
-<div class="container-fluid text-center">    
+            <div class="sidenav">
+                <div id="sidebar">
 
-  <div class="sidenav">
-  <div id="sidebar">
-      <div class="clearfix">
-      <img src="Images/canvas-logo.png" id="canvas_logo" class="navbar-left" style="padding-left: 20px; width: 90px; height: 50px;" />
-      </div>
-          <br>
-
-            <div id="sidebar_links" class="text-left" style="margin-left: 40px; overflow-y: scroll; height: 100%"">
-              <ul class="link_group list-unstyled">
-                    <li class="teal_link"><a href="#apioverview">Webservices API Overview</a></li>
-                </ul>
-            
-                <ul class="link_group list-unstyled">
-                    <li class="teal_link">Forms API</li>
-                    <li class="blue_link"><a href="#forms1">Description</a></li>
-                    <li class="blue_link"><a href="#forms2">URL</a></li>
-                    <li class="blue_link"><a href="#forms3">Parameters</a></li>
-                    <li class="blue_link"><a href="#forms4">Results</a></li>
-                </ul>
-                
-                <ul class="link_group list-unstyled">
-                    <li class="teal_link"><a href="#submissions">Submissions API</a></li>
-                    <li class="blue_link"><a href="#submissions1">Description</a></li>
-                    <li class="blue_link"><a href="#submissions2">URL</a></li>
-                    <li class="blue_link"><a href="#submissions3">Parameters</a></li>
-                    <li class="blue_link"><a href="#submissions4">Results</a></li>
-                    <li class="blue_link"><a href="#submissions5">Examples</a></li>
-                </ul>
-                
-                <ul class="link_group list-unstyled">
-                    <li class="teal_link"><a href="#images">Images API</a></li>
-                    <li class="blue_link"><a href="#images1">Description</a></li>
-                    <li class="blue_link"><a href="#images2">URL</a></li>
-                    <li class="blue_link"><a href="#images3">Parameters</a></li>
-                    <li class="blue_link"><a href="#images4">Results</a></li>
-                    <li class="blue_link"><a href="#images5">Examples</a></li>
-                </ul>
-                
-                <ul class="link_group list-unstyled">
-                    <li class="teal_link"><a href="#referencedata">Reference Data API</a></li>
-                    <li class="blue_link"><a href="#referencedata1">Description</a></li>
-                    <li class="blue_link"><a href="#referencedata2">URL</a></li>
-                    <li class="blue_link"><a href="#referencedata3">Parameters</a></li>
-                    <li class="blue_link"><a href="#referencedata4">Payload</a></li>
-                    <li class="blue_link"><a href="#referencedata5">Results</a></li>
-                    <li class="blue_link"><a href="#referencedata6">Examples</a></li>
-                </ul>
-                
-                <ul class="link_group list-unstyled">
-                    <li class="teal_link"><a href="#csvmetadata">CSV Meta Data API</a></li>
-                    <li class="blue_link"><a href="#csvmetadata1">Description</a></li>
-                    <li class="blue_link"><a href="#csvmetadata2">URL</a></li>
-                    <li class="blue_link"><a href="#csvmetadata3">Parameters</a></li>
-                    <li class="blue_link"><a href="#csvmetadata4">Results</a></li>
-                    <li class="blue_link"><a href="#csvmetadata5">Examples</a></li>
-                </ul>
-                
-                <ul class="link_group list-unstyled">
-                    <li class="teal_link"><a href="#csv">CSV API</a></li>
-                    <li class="blue_link"><a href="#csv1">Description</a></li>
-                    <li class="blue_link"><a href="#csv2">URL</a></li>
-                    <li class="blue_link"><a href="#csv3">Parameters</a></li>
-                    <li class="blue_link"><a href="#csv4">Payload</a></li>
-                    <li class="blue_link"><a href="#csv5">Results</a></li>
-                    <li class="blue_link"><a href="#csv6">Examples</a></li>
-                </ul>
-                
-                <ul class="link_group list-unstyled">
-                    <li class="teal_link"><a href="#dispatch">Dispatch Items API</a></li>
-                    <li class="blue_link"><a href="#dispatch1">Description</a></li>
-                    <li class="blue_link"><a href="#dispatch2">URL</a></li>
-                    <li class="blue_link"><a href="#dispatch3">Parameters</a></li>
-                    <li class="blue_link"><a href="#dispatch4">Results</a></li>
-                    <li class="blue_link"><a href="#dispatch5">Examples</a></li>
-                </ul>
-                
-                <ul class="link_group list-unstyled">
-                    <li class="teal_link"><a href="#push">Submission Push Notification API</a></li>
-                    <li class="blue_link"><a href="#push1">Description</a></li>
-                    <li class="blue_link"><a href="#push2">URL</a></li>
-                    <li class="blue_link"><a href="#push3">What Canvas Sends to Your Service</a></li>
-                    <li class="blue_link"><a href="#push4">Implementation Notes</a></li>
-                    <li class="blue_link"><a href="#push5">Setting Up</a></li>
-                </ul>
-                
-                <ul class="link_group list-unstyled">
-                    <li class="teal_link"><a href="#error">Error Codes</a></li>
-                    <li class="blue_link"><a href="#error1">Description</a></li>
-                    <li class="blue_link"><a href="#error2">Results</a></li>
-                    <li class="blue_link"><a href="#error3">Server Response Code</a></li>
-                    <li class="blue_link"><a href="#error4">Examples</a></li>
-                </ul>
-</div>
-</div>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-    </div>
-<div class="clearfix main-container row row-eq-height">
-    
-    <div class="col-sm-6 text-left"> 
-     <div class="api_group">
-                <div class="api_subgroup firstitem">
-                  <div class="api_groupleft">
-                      <a name="apioverview"></a>
-                        <h1>Canvas Webservices API Overview</h1>
-                        <p>The Canvas webservices API provides programmatic access to data hosted within Canvas using asecure, simple and powerful application programming interface (API). The Canvas webservices API is centered around the REST style webservices interface. The goal of the Canvas webservice API is to allow Canvas customers to automate the integration of data submitted to the Canvas servers back into other systems.</p>
-                  </div>
-                    
-                 </div>
-            </div>
-            
-            <div class="api_group">
-                <div class="api_subgroup">
-                  <div class="api_groupleft">
-                        <a name="forms"></a>
-                        <h1>Forms API</h1>
-                        <a name="forms1"></a>
-                        <h2>Description</h2>
-                        <p>The Forms API provides the capability to retrieve all or a subset of forms associated with the specified login.</p>
-                        <a name="forms2"></a>
-                        <h2>URL</h2>
-                        <p>Since this API call and results could potentially contain sensitive information, it is required to be accessed over SSL via HTTPS.</p>
-                        <p>Forms API URL: <a href="https://www.gocanvas.com/apiv2/forms.xml">https://www.gocanvas.com/apiv2/forms.xml</a></p>
-                        <a name="forms3"></a>
-                        <h2>Parameters</h2>
-                        <p>The Forms API is restricted to authenticated users and requires a username and password to access. All other parameters are optional. When no parameters are specified, a list of all forms applicable for that user is returned. If Departments is enabled, and if a department isn't specified, it will return the forms from the default department, otherwise you can pass in the name of the department to pull the forms for that department.</p>
-                        <a name="forms4"></a>
-                        <h2>Results</h2>
-                        <p>The result of the forms webservice invocation is a collection of forms.</p>
-                        <p>Form data and description:</p>
-                  </div>
-                    
-
-                 </div>
-            </div>
-<div class="api_group">
-                <div class="api_subgroup">
-                  <div class="api_groupleft">
-                      <a name="submissions"></a>
-                        <h1>Submissions API</h1>
-                        <a name="submissions1"></a>
-                        <h2>Description</h2>
-                        <p>The Submissions API provides the capability to return all or a subset of submissions associated with the specified login.</p>
-                        <a name="submissions2"></a>
-                        <h2>URL</h2>
-                        <p>Since this API call and results could potentially contain sensitive information, it is required to be accessed over SSL via HTTPS.</p>
-                        <p>Submissions API URL: <a href="https://www.gocanvas.com/apiv2/submissions.xml">https://www.gocanvas.com/apiv2/submissions.xml</a></p>
-                        <a name="submissions3"></a>
-                        <h2>Parameters</h2>
-                        <p>The Submissions API is restricted to authenticated users and requires a username and password to access. At least one parameter must be specified to limit the result to either a specific form or subset of forms via the form_name, search_form_name or form_id parameters. If a 'begin_date' is specified, a 'end_date' must also be specified. If a 'begin_second' is specified, a 'end_second' must also be specified. Results will be limited to 100 submissions per request. The 'page' parameter specifies which group of results to return. It will default to 1 if it is not specified. The total number of pages is returned in the result. If Departments is enabled, and if a department isn't specified, it will return the submissions from the default department, otherwise you can pass in the name of the department to pull the submissions in the department. Account reporters will download all submissions if they don't specify departments.</p>
-                        <a name="submissions4"></a>
-                        <h2>Results</h2>
-                        <p>The results of the submissions webservice invocation is a collection of submissions. Each submission contains a simplified form structure and can contain a collection of sections. Each section can contain a collection of sheets. Each sheet can contain a collection of responses. In addition, if a sheet is a list (either advanced or simple) it can contain a collection of responsegroups. A responsegroup simply contains the data entered in the list and a section containing the addition sheets and responses.</p>
-                        <p>Submission data and descriptions:</p>
-                        <p>Form data and descriptions:</p>
-                        <p>section data and descriptions</p>
-                        <p>Sheet data and descriptions</p>
-                        <p>Response data and descriptions</p>
-                        <a name="submissions5"></a>
-                        <h2>Examples</h2>
-                        <p>REST API call to pull all submissions for a specific account:</p>
-                        <p>Resulting XML:</p>
-                        <p>REST API call to pull all submissions for a specific account for the a 24 hours period (note: dates are inclusive and GMT based):</p>
-                        <p>REST API call to pull all submissions for a specific account for the a 48 hours period (note: dates are inclusive and GMT based):</p>
-                  </div>
-                  
-                 </div>
-            </div>
-            
-            <div class="api_group">
-                <div class="api_subgroup">
-                  <div class="api_groupleft">
-                      <a name="images"></a>
-                        <h1>Images API</h1>
-                        <a name="images1"></a>
-                        <h2>Description</h2>
-                        <p>The extra processing and difficulty in encoding a binary image into the submission XML structure lends itself to being externalized into its own webservice call to retrieve image data associated with a submission. The unique identifier of the image can be found within the submission payload as specified within the submission results section.</p>
-                        <a name="images2"></a>
-                        <h2>URL</h2>
-                        <p>Since this API call and results could potentially contain sensitive information, it is required to be accessed over SSL via HTTPS.</p>
-                        <p>Images API URL: <a href="https://www.gocanvas.com/apiv2/images.xml">https://www.gocanvas.com/apiv2/images.xml</a></p>
-                        <a name="images3"></a>
-                        <h2>Parameters</h2>
-                        <p>The Submissions API is restricted to authenticated users and requires a username and password to access. In addition, the id field is required. If these three fields aren't specified, an error is returned.</p>
-                        <a name="images4"></a>
-                        <h2>Results</h2>
-                        <p>The result of this webservice invocation will be either a standard JPEG image or an error code (detailed in the 'Error Codes' section).</p>
-                        <a name="images5"></a>
-                        <h2>Examples</h2>
-                        <p><a href="https://www.gocanvas.com/apiv2/images.xml?image_id=1&amp;username=test@gocanvas.com&amp;password=test">https://www.gocanvas.com/apiv2/images.xml?image_id=1&amp;username=test@gocanvas.com&amp;password=test</a></p>
-                  </div>
-                  
-                 </div>
-            </div>
-<div class="api_group">
-                <div class="api_subgroup">
-                  <div class="api_groupleft">
-                      <a name="referencedata"></a>
-                        <h1>Reference Data API</h1>
-                        <a name="referencedata1"></a>
-                        <h2>Description</h2>
-                        <p>Reference Data is the concept of storing datasets within Canvas that can be referenced by forms. The datasets are similar to a database table, in that there are columns and rows, with columns being uniquely named and used as the identifying attribute within the reference data. In addition, each reference data dataset needs to be uniquely named. Datasets can be divided into subsets corresponding to user groups.</p>
-                        <p>There is currently no limit on the number of datasets that can be uploaded. A dataset uploaded with the same name as an existing dataset will overwrite and replace the existing dataset unless the "Action" attribute is set to "Append". The columns of appended or updated datasets must match the columns of the existing records.</p>
-                        <a name="referencedata2"></a>
-                        <h2>URL</h2>
-                        <p>Since this API call and results could potentially contain sensitive information, it is required to be accessed over SSL via HTTPS. This URL and the necessary XML can only be accessed via a POST to the appropriate URL.</p>
-                        <p>Reference Data API URL: <a href="https://www.gocanvas.com/apiv2/reference_datas">https://www.gocanvas.com/apiv2/reference_datas</a></p>
-                        <a name="referencedata3"></a>
-                        <h2>Parameters</h2>
-                        <p>The Reference Data API is restricted to authenticated users and requires a username and password to access. If these two fields aren't specified, an error is returned.</p>
-                        <a name="referencedata4"></a>
-                        <h2>Payload</h2>
-                        <p>The payload to send must be a well formed XML document consisting of a "List" element, a "Columns" element containing the columns and a "Rows" element containing the rows of the dataset. If Departments is enabled, and if a department attribute isn't specified, it will upload the reference data to the default department, otherwise you can pass in the department attribute in the List node to upload the reference data in the department.</p>
-                        <p>List data and descriptions:</p>
-                        <p>Columns data and descriptions:</p>
-                        <p>"r" data and descriptions:</p>
-                        <a name="referencedata5"></a>
-                        <h2>Results</h2>
-                        <p>If the request is processed correctly, then an empty CanvasResult element will be returned, with a response code of 200 from the web server. If an error occurs while processing the request, one of the standard errors detailed in the Error Codes section will be returned.</p>
-                        <a name="referencedata6"></a>
-                        <h2>Examples</h2>
-                        <p>REST API call:</p>
-                        <p>Post Payload:</p>
-                        <p>Resulting XML:</p>
-                        <p>Post Payload to divide data by into user groups defined in Column1:</p>
-                        <p>Post Payload to replace the data in Group2:</p>
-                        <p>Post Payload to append new data to existing or new user groups:</p>
-                  </div>
-                  
-                 </div>
-            </div>
-            
-            <div class="api_group">
-                <div class="api_subgroup">
-                  <div class="api_groupleft">
-                      <a name="csvmetadata"></a>
-                        <h1>CSV Meta Data API</h1>
-                        <a name="csvmetadata1"></a>
-                        <h2>Description</h2>
-                        <p>The CSV Meta Data API is used to download information regarding what form versions exist that have submissions. When downloading a CSV using the Canvas API, the exact form version must be specified, because it dictates the format of the CSV that is exported - therefore the CSV Meta Data API will usually be invoked first to determine the exact form version to use to download the CSV.</p>
-                        <p>The procedural way that most users will download CSV data is:</p>
-                        <p> - Invoke the Forms API to determine which current Form ID (and its lineage) to work with. By determining the Form ID, it will also allow the lineage of Form Ids that came before it to be determined.</p>
-                        <p> - Invoke the Canvas Meta Data API, passing in the currently Form ID (or GUID) to determine which specific Form ID from the entire lineage to work with based upon the submission count for a specific date range</p>
-                        <p> - For each specific Form ID within the date range, use the CSV API to download the CSV file</p>
-                        <a name="csvmetadata2"></a>
-                        <h2>URL</h2>
-                        <p>Since this API call and results could potentially contain sensitive information, it is required to be accessed over SSL via HTTPS.</p>
-                        <p>CSV Meta Data API URL: <a href="https://www.gocanvas.com/apiv2/csv_meta_datas.xml">https://www.gocanvas.com/apiv2/csv_meta_datas.xml</p>
-                        <a name="csvmetadata3"></a>
-                        <h2>Parameters</h2>
-                        <p>The CSV Meta Data API requires valid Canvas username and password to access content, in addition to a way to specify a specific lineage of forms (either a form ID, form GUID or form name) and a date range. If Departments is enabled, and if a department isn't specified, it will download the information from the default department, otherwise you can pass in the name of the department to download the  information in the department. Account reporters will download all submissions if they don't specify departments.</p>
-                        <a name="csvmetadata4"></a>
-                        <h2>Results</h2>
-                        <p>The results of the CSV meta data API is a collection of forms from the same lineage, with the number of submissions associated with each form.</p>
-                        <p>Form data and descriptions:</p>
-                        <a name="csvmetadata5"></a>
-                        <h2>Examples</h2>
-                        <p>REST API call to pull all submissions for a specific account:</p>
-                        <p>Resulting XML:</p>
-                  </div>
-                 
-                 </div>
-            </div>
-            
-            <div class="api_group">
-                <div class="api_subgroup">
-                  <div class="api_groupleft">
-                      <a name="csv"></a>
-                        <h1>CSV API</h1>
-                        <a name="csv1"></a>
-                        <h2>Description</h2>
-                        <p>The CSV API is to download a CSV (not wrapped in XML) from a specific form version for a specific date range.</p>
-                        <a name="csv2"></a>
-                        <h2>URL</h2>
-                        <p>Since this API call and results could potentially contain sensitive information, it is required to be accessed over SSL via HTTPS.</p>
-                        <p>CSV Meta Data API URL: https://www.gocanvas.com/apiv2/csv.xml</p>
-                        <a name="csv3"></a>
-                        <h2>Parameters</h2>
-                        <p>The CSV API requires valid Canvas username and password to access content, in addition to a specific form ID and a date range. If Departments is enabled, and if a department isn't specified, it will download the information from the default department, otherwise you can pass in the name of the department to download the information in the department. Account reporters will download all information if they don't specify departments.</p>
-                        <p>This API also supports the dispatching of lists. It will only support simple lists and not advanced/nested lists. When a Dispatch List is upload, in the payload, the dispatch entries will belong to &lt;DIListItems&gt; as shown below.</p>
-                        <a name="csv4"></a>
-                        <h2>Payload</h2>
-                        <p>The payload to send must be a well formed XML document consisting of a "List" element, wrapping up one or more "DI" entries. Each of those DI entries will have an "AppName" mandatory attribute, a well as 3 other optional attributes like "Description", "User", and "ScheduleAt". Lastly, each DI element will also contain at least one "DIEntry" sub-element with its corresponding "Label" and "Value" attributes. The "Department" attribute can be added to specify the department that you want the dispatch to be uploaded to.</p>
-                        <p>List data and descriptions:</p>
-                        <p>Each DIEntry element must consist of:</p>
-                        <a name="csv5"></a>
-                        <h2>Results</h2>
-                        <p>If the request is processed correctly, then an empty CanvasResult element will be returned, with a response code of 200 from the web server. If an error occurs while processing the request, one of the standard errors detailed in the Error Codes section will be returned.</p>
-                        <a name="csv6"></a>
-                        <h2>Examples</h2>
-                        <p>REST API Call:</p>
-                        <p>Post Payload:</p>
-                        <p>Resulting XML:</p>
-                        <p>Post Payload with Dispatch List:</p>
-                        <p>Resulting XML:</p>
-                  </div>
-                  
-                 </div>
-            </div>
-            
-            <div class="api_group">
-                <div class="api_subgroup">
-                  <div class="api_groupleft">
-                      <a name="dispatch"></a>
-                        <h1>Dispatch Items API</h1>
-                        <a name="dispatch1"></a>
-                        <h2>Description</h2>
-                        <p>Dispatch items implement the concept of prepopulated submissions which may be assigned to any of your company users. There are a couple of restrictions as to what fields can be filled in advance, those should be "simple" fields, like text boxes, check boxes, integer fields, etc, as opposed to more "complex" fields such as images, drawings, signatures, etc.</p>
-                        <p>In order to use this feature, your company must have it enabled. Each form will have to have in enabled from the "App Features" menu option in the "Apps" page. One last requirement is that at least one published version of your app must exist before any items can be added to it.</p>
-                        <p>Editing is specified by the "Action" parameter. When set to "Update" it will update an existing submission with the "Description" Parameter. To update the "Description" of a Dispatch, provide the "OriginalDescription" parameter. When set to "Delete", provide the "OriginalDescription" to determine which dispatch to delete. The Dispatch must have the "Unassigned" or "Assigned" status to edit it. The Dispatch can be any status to delete it.</p>
-                        <a name="dispatch2"></a>
-                        <h2>URL</h2>
-                        <p>Since this API call and results could potentially contain sensitive information, it is required to be accessed over SSL via HTTPS.</p>
-                        <p>CSV Meta Data API URL: https://www.gocanvas.com/apiv2/csv.xml</p>
-                        <a name="dispatch3"></a>
-                        <h2>Parameters</h2>
-                        <p>The CSV API requires valid Canvas username and password to access content, in addition to a specific form ID and a date range. If Departments is enabled, and if a department isn't specified, it will download the information from the default department, otherwise you can pass in the name of the department to download the information in the department. Account reporters will download all information if they don't specify departments.</p>
-                        <a name="dispatch4"></a>
-                        <h2>Results</h2>
-                        <p>The results of this webservice invocation (if it is successful) is a CSV file. Note, that this result is not encapsulated in any XML structure.</p>
-                        <a name="dispatch5"></a>
-                        <h2>Examples</h2>
-                        <p>REST API call to pull all submissions for a specific account:</p>
-                  </div>
-                  
-                 </div>
-            </div>
-            
-            <div class="api_group">
-                <div class="api_subgroup">
-                  <div class="api_groupleft">
-                      <a name="push"></a>
-                        <h1>Submission Push Notifications</h1>
-                        <a name="push1"></a>
-                        <h2>Description</h2>
-                        <p>Canvas offers the option to notify a web service that you create any time a submission is uploaded to our service. You can find this in the "Integration Options" section for your Canvas application.</p>
-                        <p>To use this service, you'll need to implement a web service that can accept and process posted XML data. When a user uploads a submission, we'll send an HTTP POST request to your service containing metadata about the submission in XML form.</p>
-                        <a name="push2"></a>
-                        <h2>URL</h2>
-                        <p>Since this is an outbound service from Canvas to you, not one that you call, there is no URL.</p>
-                        <a name="push3"></a>
-                        <h2>What Canvas Sends to Your Service</h2>
-                        <p>For any given submission, Canvas will send the submission GUID, the name, ID, and guid of your form, and will optionally include a tag that you define (see the "Setting Up" section below). This will be contained within an XML document as the body of the HTTP POST. Here's an example:</p>
-                        <p>If you've defined no tag to be sent back to you, the element will be present but empty.</p>
-                        <a name="push4"></a>
-                        <h2>Implementation Notes</h2>
-                        <p>1. Canvas does not read or process the body or headers of your web service's response, except for the status code. It is not necessary to include a body in your response.</p>
-                        <p>2. Canvas will consider any HTTP status code that is not in the range of 200-205 to be an error, and will queue the notification to be retried later.</p>
-                        <p>3. In the event of a failure, Canvas will wait 15 minutes and then try again. On subsequent failures, Canvas adds an additional 15 minutes onto the wait time before re-trying. After 10 failures, Canvas will give up and email your account admin automatically.</p>
-                        <p>4. Canvas does not follow HTTP redirects. Redirects are treated as failures and will be re-tried.</p>
-                        <a name="push5"></a>
-                        <h2>Setting Up</h2>
-                        <p>Once you've created your web service to handle the notifications we'll send you can try it out in the Canvas web interface. Visit the "Integration Options" section for the form for which you want to receive notifications, and click the "Integrate" button next to the "Custom Push Notifications" item. (Note that Canvas presently only allows one type of integration to be active per form at any given time, so if you already have an integration you'll have to delete it to set this up). Enter the fully-qualified URL of your web service end point including the scheme (which can be either http:// or https://), and optionally enter a tag you'd like us to include with your metadata. The tag can be any arbitrary text that will help you to identify or categorize submissions by form within your web service.</p>
-                        <p>Once you've provided a URL (and, optionally, a tag), click the "Test" button. Canvas will send some sample metadata to the URL you've defined, and display the response for you so that you can see how your web service responded to the posted data. Canvas will display the status code, headers, and response body - if any - that we received from your web service. You can use this to determine whether your service is working as intended and make adjustments if you need to.</p>
-                        <p>When you're satisfied that your service is responding as you intended, go ahead and hit the "Save" button to start receiving notifications when submissions are uploaded.</p>
-                  </div>
-                  
-                 </div>
-            </div>
-<div class="api_group">
-                <div class="api_subgroup">
-                  <div class="api_groupleft">
-                      <a name="error"></a>
-                        <h1>Error Codes</h1>
-                        <a name="error1"></a>
-                        <h2>Description</h2>
-                        <p>Errors can occur when invoking the Canvas webservices for a number of reasons, such as permission problems, requested data not being found or numerous other scenarios. When invoking any of the Canvas webservice APIs, if an error occurs it will be returned in the same format regardless of the API being invoked.</p>
-                        <a name="error2"></a>
-                        <h2>Results</h2>
-                        <p>The format of the error response coming back will be a single "error" node contained within the standard Canvas "CanvasResult" node. If more than one error occurs during execution, only one will be selected and returned.</p>
-                        <p>Error data and descriptions:</p>
-                        <a name="error3"></a>
-                        <h2>Server Response Code</h2>
-                        <p>An error being successfully detected and handled, will return a server response code of 200 with the payload described above. In the unlikely event there is an unexpected fault on the server side (hardware, memory or other issues) a server response code of 5xx may be returned. Implementing software should be able to handle an error code with a server response code of 200, or a more low level server response code of 5xx with an unknown payload.</p>
-                        <a name="error4"></a>
-                        <h2>Examples</h2>
-                        <p>Example of an invalid webservice invocation (missing the required "id" parameter)</p>
-                        <p>Result:</p>
-                  </div>
-                  
-                 </div>
-            </div>
-
-    </div>
-    <div class="col-sm-6 rhtsidenav">
-      <div class="wells">
-       <div class="language_selection">
-              
-                <input type="radio" name="language" id="curl" onclick="changeToCurl()" checked/>
-                <label for="curl" style="color: #d3d3d3">curl</label>
-                <input type="radio" name="language" id="ruby" onclick="changeToRuby()"/>
-                <label for="ruby" style="color: #d3d3d3">Ruby</label>
-                <input type="radio" name="language" id="python" onclick="changeToPython()"/>
-                <label for="python" style="color: #d3d3d3">Python</label>
-                <input type="radio" name="language" id="php" onclick="changeToPHP()" />
-                <label for="php" style="color: #d3d3d3">PHP</label>
-                <input type="radio" name="language" id="java" onclick="changeToJava()"/>
-                <label for="java" style="color: #d3d3d3">Java</label>
-                <input type="radio" name="language" id="node" onclick="changeToNode()"/>
-                <label for="node" style="color: #d3d3d3">Node</label>
-                <input type="radio" name="language" id="swift" onclick="changeToSwift()"/>
-                <label for="swift" style="color: #d3d3d3">Swift</label>
-                <input type="radio" name="language" id="cpp" onclick="changeToCpp()"/>
-                <label for="cpp" style="color: #d3d3d3">C++</label>
-                
-            </div>
-      </div>
-      <div class="wells">
-       <div class="api_groupright" id="forms_api_code">
-       <div class="api_groupright">
-                      <p>&nbsp;</p>
-                      <p class="text-left api_header">Offline Version of the API is available <a href="#">here</a></p>
+                    <div class="clearfix">
+                        <img src="Images/canvas-logo.png" id="canvas_logo" class="navbar-left" />
                     </div>
 
-                      <p>&nbsp;</p>
+                    <div id="sidebar_links" class="text-left" style="margin-left: 40px; overflow-y: scroll; height: 100%">
+                        <ul class="link_group list-unstyled">
+                            <li class="teal_link"><a href="#apioverview">Webservices API Overview</a></li>
+                        </ul>
+
+                        <ul class="link_group list-unstyled">
+                            <li class="teal_link">Forms API</li>
+                            <li class="blue_link"><a href="#forms1">Description</a></li>
+                            <li class="blue_link"><a href="#forms2">URL</a></li>
+                            <li class="blue_link"><a href="#forms3">Parameters</a></li>
+                            <li class="blue_link"><a href="#forms4">Results</a></li>
+                        </ul>
+
+                        <ul class="link_group list-unstyled">
+                            <li class="teal_link"><a href="#submissions">Submissions API</a></li>
+                            <li class="blue_link"><a href="#submissions1">Description</a></li>
+                            <li class="blue_link"><a href="#submissions2">URL</a></li>
+                            <li class="blue_link"><a href="#submissions3">Parameters</a></li>
+                            <li class="blue_link"><a href="#submissions4">Results</a></li>
+                            <li class="blue_link"><a href="#submissions5">Examples</a></li>
+                        </ul>
+
+                        <ul class="link_group list-unstyled">
+                            <li class="teal_link"><a href="#images">Images API</a></li>
+                            <li class="blue_link"><a href="#images1">Description</a></li>
+                            <li class="blue_link"><a href="#images2">URL</a></li>
+                            <li class="blue_link"><a href="#images3">Parameters</a></li>
+                            <li class="blue_link"><a href="#images4">Results</a></li>
+                            <li class="blue_link"><a href="#images5">Examples</a></li>
+                        </ul>
+
+                        <ul class="link_group list-unstyled">
+                            <li class="teal_link"><a href="#referencedata">Reference Data API</a></li>
+                            <li class="blue_link"><a href="#referencedata1">Description</a></li>
+                            <li class="blue_link"><a href="#referencedata2">URL</a></li>
+                            <li class="blue_link"><a href="#referencedata3">Parameters</a></li>
+                            <li class="blue_link"><a href="#referencedata4">Payload</a></li>
+                            <li class="blue_link"><a href="#referencedata5">Results</a></li>
+                            <li class="blue_link"><a href="#referencedata6">Examples</a></li>
+                        </ul>
+
+                        <ul class="link_group list-unstyled">
+                            <li class="teal_link"><a href="#csvmetadata">CSV Meta Data API</a></li>
+                            <li class="blue_link"><a href="#csvmetadata1">Description</a></li>
+                            <li class="blue_link"><a href="#csvmetadata2">URL</a></li>
+                            <li class="blue_link"><a href="#csvmetadata3">Parameters</a></li>
+                            <li class="blue_link"><a href="#csvmetadata4">Results</a></li>
+                            <li class="blue_link"><a href="#csvmetadata5">Examples</a></li>
+                        </ul>
+
+                        <ul class="link_group list-unstyled">
+                            <li class="teal_link"><a href="#csv">CSV API</a></li>
+                            <li class="blue_link"><a href="#csv1">Description</a></li>
+                            <li class="blue_link"><a href="#csv2">URL</a></li>
+                            <li class="blue_link"><a href="#csv3">Parameters</a></li>
+                            <li class="blue_link"><a href="#csv4">Payload</a></li>
+                            <li class="blue_link"><a href="#csv5">Results</a></li>
+                            <li class="blue_link"><a href="#csv6">Examples</a></li>
+                        </ul>
+
+                        <ul class="link_group list-unstyled">
+                            <li class="teal_link"><a href="#dispatch">Dispatch Items API</a></li>
+                            <li class="blue_link"><a href="#dispatch1">Description</a></li>
+                            <li class="blue_link"><a href="#dispatch2">URL</a></li>
+                            <li class="blue_link"><a href="#dispatch3">Parameters</a></li>
+                            <li class="blue_link"><a href="#dispatch4">Results</a></li>
+                            <li class="blue_link"><a href="#dispatch5">Examples</a></li>
+                        </ul>
+
+                        <ul class="link_group list-unstyled">
+                            <li class="teal_link"><a href="#push">Submission Push Notification API</a></li>
+                            <li class="blue_link"><a href="#push1">Description</a></li>
+                            <li class="blue_link"><a href="#push2">URL</a></li>
+                            <li class="blue_link"><a href="#push3">What Canvas Sends to Your Service</a></li>
+                            <li class="blue_link"><a href="#push4">Implementation Notes</a></li>
+                            <li class="blue_link"><a href="#push5">Setting Up</a></li>
+                        </ul>
+
+                        <ul class="link_group list-unstyled">
+                            <li class="teal_link"><a href="#error">Error Codes</a></li>
+                            <li class="blue_link"><a href="#error1">Description</a></li>
+                            <li class="blue_link"><a href="#error2">Results</a></li>
+                            <li class="blue_link"><a href="#error3">Server Response Code</a></li>
+                            <li class="blue_link"><a href="#error4">Examples</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix main-container row row-eq-height">
+
+            <div class="col-sm-6 text-left">
+                <div class="api_group">
+                    <div class="api_subgroup firstitem">
+                        <div class="api_groupleft">
+                            <a name="apioverview"></a>
+                            <h1>Canvas Webservices API Overview</h1>
+                            <p>The Canvas webservices API provides programmatic access to data hosted within Canvas using asecure, simple and powerful application programming interface (API). The Canvas webservices API is centered around the REST style webservices interface. The goal of the Canvas webservice API is to allow Canvas customers to automate the integration of data submitted to the Canvas servers back into other systems.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="api_group">
+                    <div class="api_subgroup">
+                        <div class="api_groupleft">
+                            <a name="forms"></a>
+                            <h1>Forms API</h1>
+                            <a name="forms1"></a>
+                            <h2>Description</h2>
+                            <p>The Forms API provides the capability to retrieve all or a subset of forms associated with the specified login.</p>
+                            <a name="forms2"></a>
+                            <h2>URL</h2>
+                            <p>Since this API call and results could potentially contain sensitive information, it is required to be accessed over SSL via HTTPS.</p>
+                            <p>Forms API URL: <a href="https://www.gocanvas.com/apiv2/forms.xml">https://www.gocanvas.com/apiv2/forms.xml</a></p>
+                            <a name="forms3"></a>
+                            <h2>Parameters</h2>
+                            <p>The Forms API is restricted to authenticated users and requires a username and password to access. All other parameters are optional. When no parameters are specified, a list of all forms applicable for that user is returned. If Departments is enabled, and if a department isn't specified, it will return the forms from the default department, otherwise you can pass in the name of the department to pull the forms for that department.</p>
+                            <a name="forms4"></a>
+                            <h2>Results</h2>
+                            <p>The result of the forms webservice invocation is a collection of forms.</p>
+                            <p>Form data and description:</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="api_group">
+                    <div class="api_subgroup">
+                        <div class="api_groupleft">
+                            <a name="submissions"></a>
+                            <h1>Submissions API</h1>
+                            <a name="submissions1"></a>
+                            <h2>Description</h2>
+                            <p>The Submissions API provides the capability to return all or a subset of submissions associated with the specified login.</p>
+                            <a name="submissions2"></a>
+                            <h2>URL</h2>
+                            <p>Since this API call and results could potentially contain sensitive information, it is required to be accessed over SSL via HTTPS.</p>
+                            <p>Submissions API URL: <a href="https://www.gocanvas.com/apiv2/submissions.xml">https://www.gocanvas.com/apiv2/submissions.xml</a></p>
+                            <a name="submissions3"></a>
+                            <h2>Parameters</h2>
+                            <p>The Submissions API is restricted to authenticated users and requires a username and password to access. At least one parameter must be specified to limit the result to either a specific form or subset of forms via the form_name, search_form_name or form_id parameters. If a 'begin_date' is specified, a 'end_date' must also be specified. If a 'begin_second' is specified, a 'end_second' must also be specified. Results will be limited to 100 submissions per request. The 'page' parameter specifies which group of results to return. It will default to 1 if it is not specified. The total number of pages is returned in the result. If Departments is enabled, and if a department isn't specified, it will return the submissions from the default department, otherwise you can pass in the name of the department to pull the submissions in the department. Account reporters will download all submissions if they don't specify departments.</p>
+                            <a name="submissions4"></a>
+                            <h2>Results</h2>
+                            <p>The results of the submissions webservice invocation is a collection of submissions. Each submission contains a simplified form structure and can contain a collection of sections. Each section can contain a collection of sheets. Each sheet can contain a collection of responses. In addition, if a sheet is a list (either advanced or simple) it can contain a collection of responsegroups. A responsegroup simply contains the data entered in the list and a section containing the addition sheets and responses.</p>
+                            <p>Submission data and descriptions:</p>
+                            <p>Form data and descriptions:</p>
+                            <p>section data and descriptions</p>
+                            <p>Sheet data and descriptions</p>
+                            <p>Response data and descriptions</p>
+                            <a name="submissions5"></a>
+                            <h2>Examples</h2>
+                            <p>REST API call to pull all submissions for a specific account:</p>
+                            <p>Resulting XML:</p>
+                            <p>REST API call to pull all submissions for a specific account for the a 24 hours period (note: dates are inclusive and GMT based):</p>
+                            <p>REST API call to pull all submissions for a specific account for the a 48 hours period (note: dates are inclusive and GMT based):</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="api_group">
+                    <div class="api_subgroup">
+                        <div class="api_groupleft">
+                            <a name="images"></a>
+                            <h1>Images API</h1>
+                            <a name="images1"></a>
+                            <h2>Description</h2>
+                            <p>The extra processing and difficulty in encoding a binary image into the submission XML structure lends itself to being externalized into its own webservice call to retrieve image data associated with a submission. The unique identifier of the image can be found within the submission payload as specified within the submission results section.</p>
+                            <a name="images2"></a>
+                            <h2>URL</h2>
+                            <p>Since this API call and results could potentially contain sensitive information, it is required to be accessed over SSL via HTTPS.</p>
+                            <p>Images API URL: <a href="https://www.gocanvas.com/apiv2/images.xml">https://www.gocanvas.com/apiv2/images.xml</a></p>
+                            <a name="images3"></a>
+                            <h2>Parameters</h2>
+                            <p>The Submissions API is restricted to authenticated users and requires a username and password to access. In addition, the id field is required. If these three fields aren't specified, an error is returned.</p>
+                            <a name="images4"></a>
+                            <h2>Results</h2>
+                            <p>The result of this webservice invocation will be either a standard JPEG image or an error code (detailed in the 'Error Codes' section).</p>
+                            <a name="images5"></a>
+                            <h2>Examples</h2>
+                            <p><a href="https://www.gocanvas.com/apiv2/images.xml?image_id=1&amp;username=test@gocanvas.com&amp;password=test">https://www.gocanvas.com/apiv2/images.xml?image_id=1&amp;username=test@gocanvas.com&amp;password=test</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="api_group">
+                    <div class="api_subgroup">
+                        <div class="api_groupleft">
+                            <a name="referencedata"></a>
+                            <h1>Reference Data API</h1>
+                            <a name="referencedata1"></a>
+                            <h2>Description</h2>
+                            <p>Reference Data is the concept of storing datasets within Canvas that can be referenced by forms. The datasets are similar to a database table, in that there are columns and rows, with columns being uniquely named and used as the identifying attribute within the reference data. In addition, each reference data dataset needs to be uniquely named. Datasets can be divided into subsets corresponding to user groups.</p>
+                            <p>There is currently no limit on the number of datasets that can be uploaded. A dataset uploaded with the same name as an existing dataset will overwrite and replace the existing dataset unless the "Action" attribute is set to "Append". The columns of appended or updated datasets must match the columns of the existing records.</p>
+                            <a name="referencedata2"></a>
+                            <h2>URL</h2>
+                            <p>Since this API call and results could potentially contain sensitive information, it is required to be accessed over SSL via HTTPS. This URL and the necessary XML can only be accessed via a POST to the appropriate URL.</p>
+                            <p>Reference Data API URL: <a href="https://www.gocanvas.com/apiv2/reference_datas">https://www.gocanvas.com/apiv2/reference_datas</a></p>
+                            <a name="referencedata3"></a>
+                            <h2>Parameters</h2>
+                            <p>The Reference Data API is restricted to authenticated users and requires a username and password to access. If these two fields aren't specified, an error is returned.</p>
+                            <a name="referencedata4"></a>
+                            <h2>Payload</h2>
+                            <p>The payload to send must be a well formed XML document consisting of a "List" element, a "Columns" element containing the columns and a "Rows" element containing the rows of the dataset. If Departments is enabled, and if a department attribute isn't specified, it will upload the reference data to the default department, otherwise you can pass in the department attribute in the List node to upload the reference data in the department.</p>
+                            <p>List data and descriptions:</p>
+                            <p>Columns data and descriptions:</p>
+                            <p>"r" data and descriptions:</p>
+                            <a name="referencedata5"></a>
+                            <h2>Results</h2>
+                            <p>If the request is processed correctly, then an empty CanvasResult element will be returned, with a response code of 200 from the web server. If an error occurs while processing the request, one of the standard errors detailed in the Error Codes section will be returned.</p>
+                            <a name="referencedata6"></a>
+                            <h2>Examples</h2>
+                            <p>REST API call:</p>
+                            <p>Post Payload:</p>
+                            <p>Resulting XML:</p>
+                            <p>Post Payload to divide data by into user groups defined in Column1:</p>
+                            <p>Post Payload to replace the data in Group2:</p>
+                            <p>Post Payload to append new data to existing or new user groups:</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="api_group">
+                    <div class="api_subgroup">
+                        <div class="api_groupleft">
+                            <a name="csvmetadata"></a>
+                            <h1>CSV Meta Data API</h1>
+                            <a name="csvmetadata1"></a>
+                            <h2>Description</h2>
+                            <p>The CSV Meta Data API is used to download information regarding what form versions exist that have submissions. When downloading a CSV using the Canvas API, the exact form version must be specified, because it dictates the format of the CSV that is exported - therefore the CSV Meta Data API will usually be invoked first to determine the exact form version to use to download the CSV.</p>
+                            <p>The procedural way that most users will download CSV data is:</p>
+                            <p> - Invoke the Forms API to determine which current Form ID (and its lineage) to work with. By determining the Form ID, it will also allow the lineage of Form Ids that came before it to be determined.</p>
+                            <p> - Invoke the Canvas Meta Data API, passing in the currently Form ID (or GUID) to determine which specific Form ID from the entire lineage to work with based upon the submission count for a specific date range</p>
+                            <p> - For each specific Form ID within the date range, use the CSV API to download the CSV file</p>
+                            <a name="csvmetadata2"></a>
+                            <h2>URL</h2>
+                            <p>Since this API call and results could potentially contain sensitive information, it is required to be accessed over SSL via HTTPS.</p>
+                            <p>CSV Meta Data API URL: <a href="https://www.gocanvas.com/apiv2/csv_meta_datas.xml">https://www.gocanvas.com/apiv2/csv_meta_datas.xml</p>
+                            <a name="csvmetadata3"></a>
+                            <h2>Parameters</h2>
+                            <p>The CSV Meta Data API requires valid Canvas username and password to access content, in addition to a way to specify a specific lineage of forms (either a form ID, form GUID or form name) and a date range. If Departments is enabled, and if a department isn't specified, it will download the information from the default department, otherwise you can pass in the name of the department to download the  information in the department. Account reporters will download all submissions if they don't specify departments.</p>
+                            <a name="csvmetadata4"></a>
+                            <h2>Results</h2>
+                            <p>The results of the CSV meta data API is a collection of forms from the same lineage, with the number of submissions associated with each form.</p>
+                            <p>Form data and descriptions:</p>
+                            <a name="csvmetadata5"></a>
+                            <h2>Examples</h2>
+                            <p>REST API call to pull all submissions for a specific account:</p>
+                            <p>Resulting XML:</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="api_group">
+                    <div class="api_subgroup">
+                        <div class="api_groupleft">
+                            <a name="csv"></a>
+                            <h1>CSV API</h1>
+                            <a name="csv1"></a>
+                            <h2>Description</h2>
+                            <p>The CSV API is to download a CSV (not wrapped in XML) from a specific form version for a specific date range.</p>
+                            <a name="csv2"></a>
+                            <h2>URL</h2>
+                            <p>Since this API call and results could potentially contain sensitive information, it is required to be accessed over SSL via HTTPS.</p>
+                            <p>CSV Meta Data API URL: https://www.gocanvas.com/apiv2/csv.xml</p>
+                            <a name="csv3"></a>
+                            <h2>Parameters</h2>
+                            <p>The CSV API requires valid Canvas username and password to access content, in addition to a specific form ID and a date range. If Departments is enabled, and if a department isn't specified, it will download the information from the default department, otherwise you can pass in the name of the department to download the information in the department. Account reporters will download all information if they don't specify departments.</p>
+                            <p>This API also supports the dispatching of lists. It will only support simple lists and not advanced/nested lists. When a Dispatch List is upload, in the payload, the dispatch entries will belong to &lt;DIListItems&gt; as shown below.</p>
+                            <a name="csv4"></a>
+                            <h2>Payload</h2>
+                            <p>The payload to send must be a well formed XML document consisting of a "List" element, wrapping up one or more "DI" entries. Each of those DI entries will have an "AppName" mandatory attribute, a well as 3 other optional attributes like "Description", "User", and "ScheduleAt". Lastly, each DI element will also contain at least one "DIEntry" sub-element with its corresponding "Label" and "Value" attributes. The "Department" attribute can be added to specify the department that you want the dispatch to be uploaded to.</p>
+                            <p>List data and descriptions:</p>
+                            <p>Each DIEntry element must consist of:</p>
+                            <a name="csv5"></a>
+                            <h2>Results</h2>
+                            <p>If the request is processed correctly, then an empty CanvasResult element will be returned, with a response code of 200 from the web server. If an error occurs while processing the request, one of the standard errors detailed in the Error Codes section will be returned.</p>
+                            <a name="csv6"></a>
+                            <h2>Examples</h2>
+                            <p>REST API Call:</p>
+                            <p>Post Payload:</p>
+                            <p>Resulting XML:</p>
+                            <p>Post Payload with Dispatch List:</p>
+                            <p>Resulting XML:</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="api_group">
+                    <div class="api_subgroup">
+                        <div class="api_groupleft">
+                            <a name="dispatch"></a>
+                            <h1>Dispatch Items API</h1>
+                            <a name="dispatch1"></a>
+                            <h2>Description</h2>
+                            <p>Dispatch items implement the concept of prepopulated submissions which may be assigned to any of your company users. There are a couple of restrictions as to what fields can be filled in advance, those should be "simple" fields, like text boxes, check boxes, integer fields, etc, as opposed to more "complex" fields such as images, drawings, signatures, etc.</p>
+                            <p>In order to use this feature, your company must have it enabled. Each form will have to have in enabled from the "App Features" menu option in the "Apps" page. One last requirement is that at least one published version of your app must exist before any items can be added to it.</p>
+                            <p>Editing is specified by the "Action" parameter. When set to "Update" it will update an existing submission with the "Description" Parameter. To update the "Description" of a Dispatch, provide the "OriginalDescription" parameter. When set to "Delete", provide the "OriginalDescription" to determine which dispatch to delete. The Dispatch must have the "Unassigned" or "Assigned" status to edit it. The Dispatch can be any status to delete it.</p>
+                            <a name="dispatch2"></a>
+                            <h2>URL</h2>
+                            <p>Since this API call and results could potentially contain sensitive information, it is required to be accessed over SSL via HTTPS.</p>
+                            <p>CSV Meta Data API URL: https://www.gocanvas.com/apiv2/csv.xml</p>
+                            <a name="dispatch3"></a>
+                            <h2>Parameters</h2>
+                            <p>The CSV API requires valid Canvas username and password to access content, in addition to a specific form ID and a date range. If Departments is enabled, and if a department isn't specified, it will download the information from the default department, otherwise you can pass in the name of the department to download the information in the department. Account reporters will download all information if they don't specify departments.</p>
+                            <a name="dispatch4"></a>
+                            <h2>Results</h2>
+                            <p>The results of this webservice invocation (if it is successful) is a CSV file. Note, that this result is not encapsulated in any XML structure.</p>
+                            <a name="dispatch5"></a>
+                            <h2>Examples</h2>
+                            <p>REST API call to pull all submissions for a specific account:</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="api_group">
+                    <div class="api_subgroup">
+                        <div class="api_groupleft">
+                            <a name="push"></a>
+                            <h1>Submission Push Notifications</h1>
+                            <a name="push1"></a>
+                            <h2>Description</h2>
+                            <p>Canvas offers the option to notify a web service that you create any time a submission is uploaded to our service. You can find this in the "Integration Options" section for your Canvas application.</p>
+                            <p>To use this service, you'll need to implement a web service that can accept and process posted XML data. When a user uploads a submission, we'll send an HTTP POST request to your service containing metadata about the submission in XML form.</p>
+                            <a name="push2"></a>
+                            <h2>URL</h2>
+                            <p>Since this is an outbound service from Canvas to you, not one that you call, there is no URL.</p>
+                            <a name="push3"></a>
+                            <h2>What Canvas Sends to Your Service</h2>
+                            <p>For any given submission, Canvas will send the submission GUID, the name, ID, and guid of your form, and will optionally include a tag that you define (see the "Setting Up" section below). This will be contained within an XML document as the body of the HTTP POST. Here's an example:</p>
+                            <p>If you've defined no tag to be sent back to you, the element will be present but empty.</p>
+                            <a name="push4"></a>
+                            <h2>Implementation Notes</h2>
+                            <p>1. Canvas does not read or process the body or headers of your web service's response, except for the status code. It is not necessary to include a body in your response.</p>
+                            <p>2. Canvas will consider any HTTP status code that is not in the range of 200-205 to be an error, and will queue the notification to be retried later.</p>
+                            <p>3. In the event of a failure, Canvas will wait 15 minutes and then try again. On subsequent failures, Canvas adds an additional 15 minutes onto the wait time before re-trying. After 10 failures, Canvas will give up and email your account admin automatically.</p>
+                            <p>4. Canvas does not follow HTTP redirects. Redirects are treated as failures and will be re-tried.</p>
+                            <a name="push5"></a>
+                            <h2>Setting Up</h2>
+                            <p>Once you've created your web service to handle the notifications we'll send you can try it out in the Canvas web interface. Visit the "Integration Options" section for the form for which you want to receive notifications, and click the "Integrate" button next to the "Custom Push Notifications" item. (Note that Canvas presently only allows one type of integration to be active per form at any given time, so if you already have an integration you'll have to delete it to set this up). Enter the fully-qualified URL of your web service end point including the scheme (which can be either http:// or https://), and optionally enter a tag you'd like us to include with your metadata. The tag can be any arbitrary text that will help you to identify or categorize submissions by form within your web service.</p>
+                            <p>Once you've provided a URL (and, optionally, a tag), click the "Test" button. Canvas will send some sample metadata to the URL you've defined, and display the response for you so that you can see how your web service responded to the posted data. Canvas will display the status code, headers, and response body - if any - that we received from your web service. You can use this to determine whether your service is working as intended and make adjustments if you need to.</p>
+                            <p>When you're satisfied that your service is responding as you intended, go ahead and hit the "Save" button to start receiving notifications when submissions are uploaded.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="api_group">
+                    <div class="api_subgroup">
+                        <div class="api_groupleft">
+                            <a name="error"></a>
+                            <h1>Error Codes</h1>
+                            <a name="error1"></a>
+                            <h2>Description</h2>
+                            <p>Errors can occur when invoking the Canvas webservices for a number of reasons, such as permission problems, requested data not being found or numerous other scenarios. When invoking any of the Canvas webservice APIs, if an error occurs it will be returned in the same format regardless of the API being invoked.</p>
+                            <a name="error2"></a>
+                            <h2>Results</h2>
+                            <p>The format of the error response coming back will be a single "error" node contained within the standard Canvas "CanvasResult" node. If more than one error occurs during execution, only one will be selected and returned.</p>
+                            <p>Error data and descriptions:</p>
+                            <a name="error3"></a>
+                            <h2>Server Response Code</h2>
+                            <p>An error being successfully detected and handled, will return a server response code of 200 with the payload described above. In the unlikely event there is an unexpected fault on the server side (hardware, memory or other issues) a server response code of 5xx may be returned. Implementing software should be able to handle an error code with a server response code of 200, or a more low level server response code of 5xx with an unknown payload.</p>
+                            <a name="error4"></a>
+                            <h2>Examples</h2>
+                            <p>Example of an invalid webservice invocation (missing the required "id" parameter)</p>
+                            <p>Result:</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 rhtsidenav">
+                <div class="wells">
+                    <div class="language_selection">
+                        <input type="radio" name="language" id="curl" onclick="changeToCurl()" checked/>
+                        <label for="curl" style="color: #d3d3d3">curl</label>
+                        <input type="radio" name="language" id="ruby" onclick="changeToRuby()"/>
+                        <label for="ruby" style="color: #d3d3d3">Ruby</label>
+                        <input type="radio" name="language" id="python" onclick="changeToPython()"/>
+                        <label for="python" style="color: #d3d3d3">Python</label>
+                        <input type="radio" name="language" id="php" onclick="changeToPHP()" />
+                        <label for="php" style="color: #d3d3d3">PHP</label>
+                        <input type="radio" name="language" id="java" onclick="changeToJava()"/>
+                        <label for="java" style="color: #d3d3d3">Java</label>
+                        <input type="radio" name="language" id="node" onclick="changeToNode()"/>
+                        <label for="node" style="color: #d3d3d3">Node</label>
+                        <input type="radio" name="language" id="swift" onclick="changeToSwift()"/>
+                        <label for="swift" style="color: #d3d3d3">Swift</label>
+                        <input type="radio" name="language" id="cpp" onclick="changeToCpp()"/>
+                        <label for="cpp" style="color: #d3d3d3">C++</label>
+                    </div>
+                </div>
+
+                <div class="wells">
+                    <div class="api_groupright" id="forms_api_code">
+                        <div class="api_groupright">
+                            <p>&nbsp;</p>
+                            <p class="text-left api_header">Offline Version of the API is available <a href="#">here</a></p>
+                        </div>
+
+                        <p>&nbsp;</p>
                         <p>&nbsp;</p>
                         <p>&nbsp;</p><p>&nbsp;</p>
                         <p>&nbsp;</p>
@@ -447,15 +434,15 @@
                             <span class="text_turquoise">&lt;CanvasResult&gt;</span><br />
                             <span class="text_turquoise">&lt;Forms&gt;</span><br />
                             <span class="text_turquoise">&lt;Form Id="1" OriginatingLibraryTemplateId="" GUID="f6167220-a09d-11df-8e32-
-                            00242bb0cd70"&gt;</span><br />
+                                    00242bb0cd70"&gt;</span><br />
                             <span class="text_turquoise">&lt;Name&gt;</span>test form<span class="text_turquoise">&lt;/Name&gt;</span><br />
                             <span class="text_turquoise">&lt;Status&gt;</span>published<span class="text_turquoise">&lt;/Status&gt;</span><br />
                             <span class="text_turquoise">&lt;Version&gt;</span>1<span class="text_turquoise">&lt;/Version&gt;</span><br />
                             <span class="text_turquoise">&lt;/Form&gt;</span>
                         </p>
                     </div>
-      </div>
-    </div>
-  </div>
-</div>
-</body></html>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
