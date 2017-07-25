@@ -1,136 +1,138 @@
-<html lang="en"><head>
-  <title>Canvas API</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="js\Webpage_bootstrap_JS\webpage_bootstrap.js"></script>
-  <link rel="stylesheet" type="text/css" href="css\webpage_css.css">
-}
-}
-</head>
-<body>
-
-
-  
-<div class="container-fluid text-center">    
-
-  <div class="sidenav">
-  <div id="sidebar">
-      <div class="clearfix">
-      <img src="Images/canvas-logo.png" id="canvas_logo" class="navbar-left" style="padding-left: 20px; width: 90px; height: 50px;" />
-      </div>
-          <br>
-
-            <div id="sidebar_links" class="text-left" style="margin-left: 40px; overflow-y: scroll; height: 100%"">
-              <ul class="link_group list-unstyled">
-                    <li class="teal_link"><a href="#apioverview">Webservices API Overview</a></li>
-                </ul>
-            
-                <ul class="link_group list-unstyled">
-                    <li class="teal_link">Forms API</li>
-                    <li class="blue_link"><a href="#forms1">Description</a></li>
-                    <li class="blue_link"><a href="#forms2">URL</a></li>
-                    <li class="blue_link"><a href="#forms3">Parameters</a></li>
-                    <li class="blue_link"><a href="#forms4">Results</a></li>
-                </ul>
-                
-                <ul class="link_group list-unstyled">
-                    <li class="teal_link"><a href="#submissions">Submissions API</a></li>
-                    <li class="blue_link"><a href="#submissions1">Description</a></li>
-                    <li class="blue_link"><a href="#submissions2">URL</a></li>
-                    <li class="blue_link"><a href="#submissions3">Parameters</a></li>
-                    <li class="blue_link"><a href="#submissions4">Results</a></li>
-                    <li class="blue_link"><a href="#submissions5">Examples</a></li>
-                </ul>
-                
-                <ul class="link_group list-unstyled">
-                    <li class="teal_link"><a href="#images">Images API</a></li>
-                    <li class="blue_link"><a href="#images1">Description</a></li>
-                    <li class="blue_link"><a href="#images2">URL</a></li>
-                    <li class="blue_link"><a href="#images3">Parameters</a></li>
-                    <li class="blue_link"><a href="#images4">Results</a></li>
-                    <li class="blue_link"><a href="#images5">Examples</a></li>
-                </ul>
-                
-                <ul class="link_group list-unstyled">
-                    <li class="teal_link"><a href="#referencedata">Reference Data API</a></li>
-                    <li class="blue_link"><a href="#referencedata1">Description</a></li>
-                    <li class="blue_link"><a href="#referencedata2">URL</a></li>
-                    <li class="blue_link"><a href="#referencedata3">Parameters</a></li>
-                    <li class="blue_link"><a href="#referencedata4">Payload</a></li>
-                    <li class="blue_link"><a href="#referencedata5">Results</a></li>
-                    <li class="blue_link"><a href="#referencedata6">Examples</a></li>
-                </ul>
-                
-                <ul class="link_group list-unstyled">
-                    <li class="teal_link"><a href="#csvmetadata">CSV Meta Data API</a></li>
-                    <li class="blue_link"><a href="#csvmetadata1">Description</a></li>
-                    <li class="blue_link"><a href="#csvmetadata2">URL</a></li>
-                    <li class="blue_link"><a href="#csvmetadata3">Parameters</a></li>
-                    <li class="blue_link"><a href="#csvmetadata4">Results</a></li>
-                    <li class="blue_link"><a href="#csvmetadata5">Examples</a></li>
-                </ul>
-                
-                <ul class="link_group list-unstyled">
-                    <li class="teal_link"><a href="#csv">CSV API</a></li>
-                    <li class="blue_link"><a href="#csv1">Description</a></li>
-                    <li class="blue_link"><a href="#csv2">URL</a></li>
-                    <li class="blue_link"><a href="#csv3">Parameters</a></li>
-                    <li class="blue_link"><a href="#csv4">Payload</a></li>
-                    <li class="blue_link"><a href="#csv5">Results</a></li>
-                    <li class="blue_link"><a href="#csv6">Examples</a></li>
-                </ul>
-                
-                <ul class="link_group list-unstyled">
-                    <li class="teal_link"><a href="#dispatch">Dispatch Items API</a></li>
-                    <li class="blue_link"><a href="#dispatch1">Description</a></li>
-                    <li class="blue_link"><a href="#dispatch2">URL</a></li>
-                    <li class="blue_link"><a href="#dispatch3">Parameters</a></li>
-                    <li class="blue_link"><a href="#dispatch4">Results</a></li>
-                    <li class="blue_link"><a href="#dispatch5">Examples</a></li>
-                </ul>
-                
-                <ul class="link_group list-unstyled">
-                    <li class="teal_link"><a href="#push">Submission Push Notification API</a></li>
-                    <li class="blue_link"><a href="#push1">Description</a></li>
-                    <li class="blue_link"><a href="#push2">URL</a></li>
-                    <li class="blue_link"><a href="#push3">What Canvas Sends to Your Service</a></li>
-                    <li class="blue_link"><a href="#push4">Implementation Notes</a></li>
-                    <li class="blue_link"><a href="#push5">Setting Up</a></li>
-                </ul>
-                
-                <ul class="link_group list-unstyled">
-                    <li class="teal_link"><a href="#error">Error Codes</a></li>
-                    <li class="blue_link"><a href="#error1">Description</a></li>
-                    <li class="blue_link"><a href="#error2">Results</a></li>
-                    <li class="blue_link"><a href="#error3">Server Response Code</a></li>
-                    <li class="blue_link"><a href="#error4">Examples</a></li>
-                </ul>
-</div>
-</div>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-    </div>
-<div class="clearfix main-container row row-eq-height">
-    
-    <div class="col-sm-6 text-left"> 
-     <div class="api_group">
-                <div class="api_subgroup firstitem">
-                  <div class="api_groupleft">
-                      <a name="apioverview"></a>
+<html lang="en">
+   <head>
+      <title>Canvas API</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="js\Webpage_bootstrap_JS\webpage_bootstrap.js"></script>
+      <link rel="stylesheet" type="text/css" href="css\webpage_css.css">
+   </head>
+   <body>
+      <div class="container-fluid text-center">
+         <div class="sidenav">
+            <div id="sidebar">
+               <div class="clearfix">
+                  <img src="Images/canvas-logo.png" id="canvas_logo" class="navbar-left" style="padding-left: 20px; width: 90px; height: 50px;" />
+               </div>
+               <br>
+               <div id="sidebar_links" class="text-left" style="margin-left: 40px; overflow-y: scroll; height: 100%"">
+                  <ul class="link_group list-unstyled">
+                     <li class="teal_link"><a href="#apioverview">Webservices API Overview</a></li>
+                  </ul>
+                  <ul class="link_group list-unstyled">
+                     <li class="teal_link">Forms API</li>
+                     <li class="blue_link"><a href="#forms1">Description</a></li>
+                     <li class="blue_link"><a href="#forms2">URL</a></li>
+                     <li class="blue_link"><a href="#forms3">Parameters</a></li>
+                     <li class="blue_link"><a href="#forms4">Results</a></li>
+                  </ul>
+                  <ul class="link_group list-unstyled">
+                     <li class="teal_link"><a href="#submissions">Submissions API</a></li>
+                     <li class="blue_link"><a href="#submissions1">Description</a></li>
+                     <li class="blue_link"><a href="#submissions2">URL</a></li>
+                     <li class="blue_link"><a href="#submissions3">Parameters</a></li>
+                     <li class="blue_link"><a href="#submissions4">Results</a></li>
+                     <li class="blue_link"><a href="#submissions5">Examples</a></li>
+                  </ul>
+                  <ul class="link_group list-unstyled">
+                     <li class="teal_link"><a href="#images">Images API</a></li>
+                     <li class="blue_link"><a href="#images1">Description</a></li>
+                     <li class="blue_link"><a href="#images2">URL</a></li>
+                     <li class="blue_link"><a href="#images3">Parameters</a></li>
+                     <li class="blue_link"><a href="#images4">Results</a></li>
+                     <li class="blue_link"><a href="#images5">Examples</a></li>
+                  </ul>
+                  <ul class="link_group list-unstyled">
+                     <li class="teal_link"><a href="#referencedata">Reference Data API</a></li>
+                     <li class="blue_link"><a href="#referencedata1">Description</a></li>
+                     <li class="blue_link"><a href="#referencedata2">URL</a></li>
+                     <li class="blue_link"><a href="#referencedata3">Parameters</a></li>
+                     <li class="blue_link"><a href="#referencedata4">Payload</a></li>
+                     <li class="blue_link"><a href="#referencedata5">Results</a></li>
+                     <li class="blue_link"><a href="#referencedata6">Examples</a></li>
+                  </ul>
+                  <ul class="link_group list-unstyled">
+                     <li class="teal_link"><a href="#csvmetadata">CSV Meta Data API</a></li>
+                     <li class="blue_link"><a href="#csvmetadata1">Description</a></li>
+                     <li class="blue_link"><a href="#csvmetadata2">URL</a></li>
+                     <li class="blue_link"><a href="#csvmetadata3">Parameters</a></li>
+                     <li class="blue_link"><a href="#csvmetadata4">Results</a></li>
+                     <li class="blue_link"><a href="#csvmetadata5">Examples</a></li>
+                  </ul>
+                  <ul class="link_group list-unstyled">
+                     <li class="teal_link"><a href="#csv">CSV API</a></li>
+                     <li class="blue_link"><a href="#csv1">Description</a></li>
+                     <li class="blue_link"><a href="#csv2">URL</a></li>
+                     <li class="blue_link"><a href="#csv3">Parameters</a></li>
+                     <li class="blue_link"><a href="#csv4">Payload</a></li>
+                     <li class="blue_link"><a href="#csv5">Results</a></li>
+                     <li class="blue_link"><a href="#csv6">Examples</a></li>
+                  </ul>
+                  <ul class="link_group list-unstyled">
+                     <li class="teal_link"><a href="#dispatch">Dispatch Items API</a></li>
+                     <li class="blue_link"><a href="#dispatch1">Description</a></li>
+                     <li class="blue_link"><a href="#dispatch2">URL</a></li>
+                     <li class="blue_link"><a href="#dispatch3">Parameters</a></li>
+                     <li class="blue_link"><a href="#dispatch4">Results</a></li>
+                     <li class="blue_link"><a href="#dispatch5">Examples</a></li>
+                  </ul>
+                  <ul class="link_group list-unstyled">
+                     <li class="teal_link"><a href="#push">Submission Push Notification API</a></li>
+                     <li class="blue_link"><a href="#push1">Description</a></li>
+                     <li class="blue_link"><a href="#push2">URL</a></li>
+                     <li class="blue_link"><a href="#push3">What Canvas Sends to Your Service</a></li>
+                     <li class="blue_link"><a href="#push4">Implementation Notes</a></li>
+                     <li class="blue_link"><a href="#push5">Setting Up</a></li>
+                  </ul>
+                  <ul class="link_group list-unstyled">
+                     <li class="teal_link"><a href="#error">Error Codes</a></li>
+                     <li class="blue_link"><a href="#error1">Description</a></li>
+                     <li class="blue_link"><a href="#error2">Results</a></li>
+                     <li class="blue_link"><a href="#error3">Server Response Code</a></li>
+                     <li class="blue_link"><a href="#error4">Examples</a></li>
+                  </ul>
+               </div>
+            </div>
+            <p><a href="#">Link</a></p>
+            <p><a href="#">Link</a></p>
+            <p><a href="#">Link</a></p>
+         </div>
+         <div class="clearfix main-container" style="padding-top:52px">
+            <div class="navbar-fixed-top row" style="margin-left:225px;">
+               <div class="col-xs-offset-6 col-xs-6" >
+                  <div class="language_selection row">
+                     <input type="radio" name="language" id="curl" onclick="changeToCurl()" checked/>
+                     <label for="curl" style="color: #d3d3d3">curl</label>
+                     <input type="radio" name="language" id="ruby" onclick="changeToRuby()"/>
+                     <label for="ruby" style="color: #d3d3d3">Ruby</label>
+                     <input type="radio" name="language" id="python" onclick="changeToPython()"/>
+                     <label for="python" style="color: #d3d3d3">Python</label>
+                     <input type="radio" name="language" id="php" onclick="changeToPHP()" />
+                     <label for="php" style="color: #d3d3d3">PHP</label>
+                     <input type="radio" name="language" id="java" onclick="changeToJava()"/>
+                     <label for="java" style="color: #d3d3d3">Java</label>
+                     <input type="radio" name="language" id="node" onclick="changeToNode()"/>
+                     <label for="node" style="color: #d3d3d3">Node</label>
+                     <input type="radio" name="language" id="swift" onclick="changeToSwift()"/>
+                     <label for="swift" style="color: #d3d3d3">Swift</label>
+                     <input type="radio" name="language" id="cpp" onclick="changeToCpp()"/>
+                     <label for="cpp" style="color: #d3d3d3">C++</label>
+                  </div>
+               </div>
+            </div>
+            <div class="row row-eq-height">
+               <div class="col-sm-6 text-left">
+                  <div class="api_subgroup firstitem">
+                     <div class="api_groupleft">
+                        <a name="apioverview"></a>
                         <h1>Canvas Webservices API Overview</h1>
                         <p>The Canvas webservices API provides programmatic access to data hosted within Canvas using asecure, simple and powerful application programming interface (API). The Canvas webservices API is centered around the REST style webservices interface. The goal of the Canvas webservice API is to allow Canvas customers to automate the integration of data submitted to the Canvas servers back into other systems.</p>
+                     </div>
                   </div>
-                    
-                 </div>
-            </div>
-            
-            <div class="api_group">
-                <div class="api_subgroup">
-                  <div class="api_groupleft">
+                  <div class="api_subgroup">
+                     <div class="api_groupleft">
                         <a name="forms"></a>
                         <h1>Forms API</h1>
                         <a name="forms1"></a>
@@ -147,15 +149,50 @@
                         <h2>Results</h2>
                         <p>The result of the forms webservice invocation is a collection of forms.</p>
                         <p>Form data and description:</p>
+                     </div>
                   </div>
-                    
-
-                 </div>
+               </div>
+               <div class="col-sm-6 rhtsidenav">
+                  <div class="wells">
+                     <div class="api_groupright" id="forms_api_code">
+                        <div class="api_groupright">
+                           <p>&nbsp;</p>
+                           <p class="text-left api_header">Offline Version of the API is available <a href="#">here</a></p>
+                        </div>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p class="api_header text-left">Forms API URL:</p>
+                        <p class="code">https://www.gocanvas.com/apiv2/forms.xml</p>
+                        <p class="text-left api_header">REST API Call Example:</p>
+                        <p class="code">https://www.gocanvas.com/apiv2/forms.xml?username=test@test.com&password=test_password</p>
+                        <p>&nbsp;</p>
+                        <p class="text-left api_header">Resulting XML:</p>
+                        <p class="code">
+                           <span class="text_turquoise">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br />
+                           <span class="text_turquoise">&lt;CanvasResult&gt;</span><br />
+                           <span class="text_turquoise">&lt;Forms&gt;</span><br />
+                           <span class="text_turquoise">&lt;Form Id="1" OriginatingLibraryTemplateId="" GUID="f6167220-a09d-11df-8e32-
+                           00242bb0cd70"&gt;</span><br />
+                           <span class="text_turquoise">&lt;Name&gt;</span>test form<span class="text_turquoise">&lt;/Name&gt;</span><br />
+                           <span class="text_turquoise">&lt;Status&gt;</span>published<span class="text_turquoise">&lt;/Status&gt;</span><br />
+                           <span class="text_turquoise">&lt;Version&gt;</span>1<span class="text_turquoise">&lt;/Version&gt;</span><br />
+                           <span class="text_turquoise">&lt;/Form&gt;</span>
+                        </p>
+                        
+                     </div>
+                  </div>
+               </div>
             </div>
-<div class="api_group">
-                <div class="api_subgroup">
-                  <div class="api_groupleft">
-                      <a name="submissions"></a>
+            <div class="row row-eq-height">
+               <div class="col-sm-6 text-left">
+                  
+                  <div class="api_subgroup">
+                     <div class="api_groupleft">
+                        <a name="submissions"></a>
                         <h1>Submissions API</h1>
                         <a name="submissions1"></a>
                         <h2>Description</h2>
@@ -181,15 +218,99 @@
                         <p>Resulting XML:</p>
                         <p>REST API call to pull all submissions for a specific account for the a 24 hours period (note: dates are inclusive and GMT based):</p>
                         <p>REST API call to pull all submissions for a specific account for the a 48 hours period (note: dates are inclusive and GMT based):</p>
+                     </div>
                   </div>
-                  
-                 </div>
+               </div>
+               <div class="col-sm-6 rhtsidenav">
+                  <div class="wells">
+                     <div class="api_groupright" id="submissions_api_code">
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p class="api_header text-left">Submissions API URL:</p>
+                        <p class="code">https://www.gocanvas.com/apiv2/submissions.xml</p>
+                        <p class="api_header text-left">REST API Call Example:</p>
+                        <p class="code">https://www.gocanvas.com/apiv2/forms.xml?username=test@test.com&password=test_password</p>
+                        <p>&nbsp;</p>
+                        <p class="api_header text-left">Resulting XML:</p>
+                        <p class="code">
+                            							<span class="text_turquoise">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br />
+                            <span class="text_turquoise">&lt;CanvasResult&gt;</span><br />
+                            <span class="text_turquoise">&lt;TotalPages&gt;</span>1<span class="text_turquoise">&lt;/TotalPages&gt;</span><br />
+                            <span class="text_turquoise">&lt;Submissions&gt;</span><br />
+                            <span class="text_turquoise">&lt;Submission Id="1" Department="Test Department"&gt;</span><br />
+                            <span class="text_turquoise">&lt;UserName&gt;</span>test@test.com<span class="text_turquoise">&lt;/UserName&gt;</span><br />
+                            <span class="text_turquoise">&lt;FirstName&gt;</span>Test<span class="text_turquoise">&lt;/FirstName&gt;</span><br />
+                            <span class="text_turquoise">&lt;LastName&gt;</span>Tester<span class="text_turquoise">&lt;/LastName&gt;</span><br />
+                            <span class="text_turquoise">&lt;ResponseID&gt;</span>258aaa53-77aa2-4e58-bb88-f404dd363fff3<span class="text_turquoise">&lt;/ResponseID&gt;</span><br />
+                            <span class="text_turquoise">&lt;Date&gt;</span>2009.08.31 20:20:17<span class="text_turquoise">&lt;/Date&gt;</span><br />
+                            <span class="text_turquoise">&lt;DeviceDate&gt;</span>2009.08.31 20:20:17<span class="text_turquoise">&lt;/DeviceDate&gt;</span><br />
+                            <span class="text_turquoise">&lt;Form Id="1"&gt;</span><br />
+                            <span class="text_turquoise">&lt;Name&gt;</span>test form<span class="text_turquoise">&lt;/Name&gt;</span><br />
+                            <span class="text_turquoise">&lt;Status&gt;</span>published<span class="text_turquoise">&lt;/Status&gt;</span><br />
+                            <span class="text_turquoise">&lt;Version&gt;</span>1<span class="text_turquoise">&lt;/Version&gt;</span><br />
+                            <span class="text_turquoise">&lt;/Form&gt;</span><br />
+                            <span class="text_turquoise">&lt;Sections&gt;</span><br />
+                            <span class="text_turquoise">&lt;Section&gt;</span><br />
+                            <span class="text_turquoise">&lt;Name&gt;</span>Main Info<span class="text_turquoise">&lt;/Name&gt;</span><br />
+                            <span class="text_turquoise">&lt;Sheets&gt;</span><br />
+                            <span class="text_turquoise">&lt;Sheet&gt;</span><br />
+                            <span class="text_turquoise">&lt;Name&gt;</span>Main Info<span class="text_turquoise">&lt;/Name&gt;</span><br />
+                            <span class="text_turquoise">&lt;Responses&gt;</span><br />
+                            <span class="text_turquoise">&lt;Response id="8217"&gt;</span><br />
+                            <span class="text_turquoise">&lt;label&gt;</span>First Name<span class="text_turquoise">&lt;/label&gt;</span><br />
+                            <span class="text_turquoise">&lt;value&gt;</span>James<span class="text_turquoise">&lt;/value&gt;</span><br />
+                            <span class="text_turquoise">&lt;type&gt;</span>Text Box<span class="text_turquoise">&lt;/type&gt;</span><br />
+                            <span class="text_turquoise">&lt;/Response&gt;</span><br />
+                            <span class="text_turquoise">&lt;/Responses&gt;</span><br />
+                            <span class="text_turquoise">&lt;/Sheet&gt;</span><br />
+                            <span class="text_turquoise">&lt;Sheet&gt;</span><br />
+                            <span class="text_turquoise">&lt;Name&gt;</span>Date List<span class="text_turquoise">&lt;/Name&gt;</span><br />
+                            <span class="text_turquoise">&lt;ResponseGroups&gt;</span><br />
+                            <span class="text_turquoise">&lt;ResponseGroup&gt;</span><br />
+                            <span class="text_turquoise">&lt;Response&gt;</span><br />
+                            <span class="text_turquoise">&lt;Label&gt;</span>Date<span class="text_turquoise">&lt;/Label&gt;</span><br />
+                            <span class="text_turquoise">&lt;Value&gt;</span>6/22/09<span class="text_turquoise">&lt;/Value&gt;</span><br />
+                            <span class="text_turquoise">&lt;Type&gt;</span>Date<span class="text_turquoise">&lt;/Type&gt;</span><br />
+                            <span class="text_turquoise">&lt;/Response&gt;</span><br />
+                            <span class="text_turquoise">&lt;Section&gt;</span><br />
+                            <span class="text_turquoise">&lt;Name&gt;</span>Date Entry<span class="text_turquoise">&lt;/Name&gt;</span><br />
+                            <span class="text_turquoise">&lt;Sheets&gt;</span><br />
+                            <span class="text_turquoise">&lt;Sheet&gt;</span><br />
+                            <span class="text_turquoise">&lt;Name&gt;</span>Date<span class="text_turquoise">&lt;/Name&gt;</span><br />
+                            <span class="text_turquoise">&lt;Responses&gt;</span><br />
+                            <span class="text_turquoise">&lt;Response&gt;</span><br />
+                            <span class="text_turquoise">&lt;Label&gt;</span>Date<span class="text_turquoise">&lt;/Label&gt;</span><br />
+                            <span class="text_turquoise">&lt;Value&gt;</span>06/22/09<span class="text_turquoise">&lt;/Value&gt;</span><br />
+                            <span class="text_turquoise">&lt;Type&gt;</span>Date<span class="text_turquoise">&lt;/Type&gt;</span><br />
+                            <span class="text_turquoise">&lt;/Response&gt;</span><br />
+                            <span class="text_turquoise">&lt;Response&gt;</span><br />
+                            <span class="text_turquoise">&lt;Label&gt;</span>Click your track ball and select "Next" to enter a list of time entries.<span class="text_turquoise">&lt;/Label&gt;</span><br />
+                            <span class="text_turquoise">&lt;Value&gt;</span><br /><span class="text_turquoise">&lt;/Value&gt;</span><br />
+                            <span class="text_turquoise">&lt;Type&gt;</span>Static Text<span class="text_turquoise">&lt;/Type&gt;</span><br />
+                            <span class="text_turquoise">&lt;/Response&gt;</span><br />
+                            <span class="text_turquoise">&lt;/Responses&gt;</span><br />
+                            <span class="text_turquoise">&lt;/Sheet&gt;</span><br />
+                            <span class="text_turquoise">&lt;/Sheets&gt;</span><br />
+                            <span class="text_turquoise">&lt;/Section&gt;</span><br />
+                            <span class="text_turquoise">&lt;/ResponseGroup&gt;</span><br />
+                            <span class="text_turquoise">&lt;/ResponseGroups&gt;</span><br />
+                            <span class="text_turquoise">&lt;/Sheet&gt;</span><br />
+                            <span class="text_turquoise">&lt;/Sheets&gt;</span><br />
+                            <span class="text_turquoise">&lt;/Section&gt;</span><br />
+                            <span class="text_turquoise">&lt;/Sections&gt;</span><br />
+                            <span class="text_turquoise">&lt;/Submission&gt;</span><br />
+                            <span class="text_turquoise">&lt;/Submissions&gt;</span><br />
+                            <span class="text_turquoise">&lt;/CanvasResult&gt;</span><br />
+                     </div>
+                  </div>
+               </div>
             </div>
-            
-            <div class="api_group">
-                <div class="api_subgroup">
-                  <div class="api_groupleft">
-                      <a name="images"></a>
+			
+			<div class="row row-eq-height">
+               <div class="col-sm-6 text-left">
+                  <div class="api_subgroup">
+                     <div class="api_groupleft">
+                       <a name="images"></a>
                         <h1>Images API</h1>
                         <a name="images1"></a>
                         <h2>Description</h2>
@@ -207,14 +328,36 @@
                         <a name="images5"></a>
                         <h2>Examples</h2>
                         <p><a href="https://www.gocanvas.com/apiv2/images.xml?image_id=1&amp;username=test@gocanvas.com&amp;password=test">https://www.gocanvas.com/apiv2/images.xml?image_id=1&amp;username=test@gocanvas.com&amp;password=test</a></p>
+                     </div>
                   </div>
-                  
-                 </div>
+               </div>
+               <div class="col-sm-6 rhtsidenav">
+                  <div class="wells">
+                     <div class="api_groupright" id="images_api_code">
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p class="api_header text-left">Images API URL:</p>
+                        <p class="code">https://www.gocanvas.com/apiv2/images.xml</p>
+                        <p class="api_header text-left">REST API Call Example:</p>
+                        <p class="code">https://www.gocanvas.com/apiv2/images.xml?image_id=1&username=test@test.com&password=test</p>
+                        <p>&nbsp;</p>
+                        <p class="api_header text-left">Resulting image:</p><br>
+						<center>
+                        <p class="code">
+                        	<img src="images/image-api-result.png" />
+                        </p></center>
+                     </div>
+                  </div>
+               </div>
             </div>
-<div class="api_group">
-                <div class="api_subgroup">
-                  <div class="api_groupleft">
-                      <a name="referencedata"></a>
+			
+			
+			
+			<div class="row row-eq-height">
+               <div class="col-sm-6 text-left">
+                  <div class="api_subgroup">
+                     <div class="api_groupleft">
+                       <a name="referencedata"></a>
                         <h1>Reference Data API</h1>
                         <a name="referencedata1"></a>
                         <h2>Description</h2>
@@ -244,15 +387,81 @@
                         <p>Post Payload to divide data by into user groups defined in Column1:</p>
                         <p>Post Payload to replace the data in Group2:</p>
                         <p>Post Payload to append new data to existing or new user groups:</p>
+                     </div>
                   </div>
-                  
-                 </div>
+               </div>
+               <div class="col-sm-6 rhtsidenav">
+                  <div class="wells">
+                     <div class="api_groupright" id="reference_data_api_code">
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p class="api_header text-left">Reference Data API URL:</p>
+                        <p class="code">https://www.gocanvas.com/apiv2/reference_datas</p>
+                        <p class="api_header text-left">REST API Call Example:</p>
+                        <p class="code">https://www.gocanvas.com/apiv2/reference_datas?username=test@test.com&password=test_password</p>
+                        <p>&nbsp;</p>
+                        <p class="api_header text-left">Post Payload:</p>
+                        <p class="code">
+                        	&lt;?xml version="1.0" encoding="utf-8"?&gt;<br />
+                            &lt;List Name="test name" Department="Test Department"&gt;<br />
+                            &lt;Columns&gt;&lt;c&gt;Column1&lt;/c&gt;&lt;c&gt;Column2&lt;/c&gt;&lt;c&gt;Column3&lt;/c&gt;&lt;/Columns&gt;<br />
+                            &lt;Rows&gt;<br />
+                            &lt;r&gt;&lt;v&gt;Data1Column1&lt;/v&gt;&lt;v&gt;Data1Column2&lt;/v&gt;&lt;v&gt;Data1Column3&lt;/v&gt;&lt;/r&gt;<br />
+                            &lt;r&gt;&lt;v&gt;Data2Column1&lt;/v&gt;&lt;v&gt;Data2Column2&lt;/v&gt;&lt;v&gt;Data2Column3&lt;/v&gt;&lt;/r&gt;<br />
+                            &lt;/Rows&gt;<br />
+                            &lt;/List&gt;<br />
+                        </p>
+                        <p class="api_header text-left">Resulting XML:</p>
+                        <p class="code">
+                        	&lt;?xml version="1.0" encoding="utf-8"?&gt;<br />
+                            &lt;CanvasResult&gt;<br />
+                            &lt;/CanvasResult&gt;<br />
+                        </p>
+                        <p class="api_header text-left"> Post Payload to divide data by into user groups defined in Column1:</p>
+                        <p class="code">
+                        	&lt;?xml version="1.0" encoding="utf-8"?&gt;<br />
+                            &lt;List Name="test name" UserGroupColumn ="Column1&gt;<br />
+                            &lt;Columns&gt;&lt;c&gt;Column1&lt;/c&gt;&lt;c&gt;Column2&lt;/c&gt;&lt;c&gt;Column3&lt;/c&gt;&lt;/Columns&gt;<br />
+                            &lt;Rows&gt;<br />
+                            &lt;r&gt;&lt;v&gt;Group1&lt;/v&gt;&lt;v&gt;Data1Column2&lt;/v&gt;&lt;v&gt;Data1Column3&lt;/v&gt;&lt;/r&gt;<br />
+                            &lt;r&gt;&lt;v&gt;Group2&lt;/v&gt;&lt;v&gt;Data2Column2&lt;/v&gt;&lt;v&gt;Data2Column3&lt;/v&gt;&lt;/r&gt;<br />
+                            &lt;/Rows&gt;<br />
+                            &lt;/List&gt;<br />
+                        </p>
+                        <p class="api_header text-left">Post Payload to replace the data in Group2:</p>
+                        <p class="code">
+                        	&lt;?xml version="1.0" encoding="utf-8"?&gt;<br />
+                            &lt;List Name="test name" Action="Update" UserGroup =" Group2&gt;<br />
+                            &lt;Columns&gt;&lt;c&gt;Column1&lt;/c&gt;&lt;c&gt;Column2&lt;/c&gt;&lt;c&gt;Column3&lt;/c&gt;&lt;/Columns&gt;<br />
+                            &lt;Rows&gt;<br />
+                            &lt;r&gt;&lt;v&gt;Group2&lt;/v&gt;&lt;v&gt;Data3Column2&lt;/v&gt;&lt;v&gt;Data3Column3&lt;/v&gt;&lt;/r&gt;<br />
+                            &lt;r&gt;&lt;v&gt;Group2&lt;/v&gt;&lt;v&gt;Data4Column2&lt;/v&gt;&lt;v&gt;Data4Column3&lt;/v&gt;&lt;/r&gt;<br />
+                            &lt;/Rows&gt;<br />
+                            &lt;/List&gt;<br />
+                        </p>
+                        <p class="api_header text-left">Post Payload to append new data to existing or new user groups:</p>
+                        <p class="code">
+                        	&lt;?xml version="1.0" encoding="utf-8"?&gt;<br />
+                            &lt;List Name="test name" Action="Append"&gt;<br />
+                            &lt;Columns&gt;&lt;c&gt;Column1&lt;/c&gt;&lt;c&gt;Column2&lt;/c&gt;&lt;c&gt;Column3&lt;/c&gt;&lt;/Columns&gt;<br />
+                            &lt;Rows&gt;<br />
+                            &lt;r&gt;&lt;v&gt;Group2&lt;/v&gt;&lt;v&gt;Data5Column2&lt;/v&gt;&lt;v&gt;Data5Column3&lt;/v&gt;&lt;/r&gt;<br />
+                            &lt;r&gt;&lt;v&gt;Group3&lt;/v&gt;&lt;v&gt;Data6Column2&lt;/v&gt;&lt;v&gt;Data6Column3&lt;/v&gt;&lt;/r&gt;<br />
+                            &lt;/Rows&gt;<br />
+                            &lt;/List&gt;<br />
+                        </p>
+                     </div>
+                  </div>
+               </div>
             </div>
-            
-            <div class="api_group">
-                <div class="api_subgroup">
-                  <div class="api_groupleft">
-                      <a name="csvmetadata"></a>
+			
+			
+			
+			<div class="row row-eq-height">
+               <div class="col-sm-6 text-left">
+                  <div class="api_subgroup">
+                     <div class="api_groupleft">
+                       <a name="csvmetadata"></a>
                         <h1>CSV Meta Data API</h1>
                         <a name="csvmetadata1"></a>
                         <h2>Description</h2>
@@ -276,15 +485,55 @@
                         <h2>Examples</h2>
                         <p>REST API call to pull all submissions for a specific account:</p>
                         <p>Resulting XML:</p>
+                     </div>
                   </div>
-                 
-                 </div>
+               </div>
+               <div class="col-sm-6 rhtsidenav">
+                  <div class="wells">
+                     <div class="api_groupright" id="forms_api_code">
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p class="api_header text-left">CSV Meta Data API URL:</p>
+                        <p class="code">https://www.gocanvas.com/apiv2/csv_meta_datas.xml</p>
+                        <p class="api_header text-left">https://www.gocanvas.com/apiv2/csv_meta_datas.xml</p>
+                        <p class="code">https://www.gocanvas.com/apiv2/csv_meta_datas.xml?username=test@test.com&password=test_password&form_id=1&begin_second=962461752&end_second=1593613752</p>
+                        <p>&nbsp;</p>
+                        <p class="api_header text-left">Resulting XML:</p>
+                        <p class="code">
+                        	&lt;?xml version="1.0" encoding="utf-8"?&gt;<br />
+                            &lt;CanvasResult&gt;<br />
+                            &lt;CSVMetaData&gt;<br />
+                            &lt;Form Id="1" OriginatingLibraryTemplateId="" GUID="f6167220-a09d-11df-8e32-
+                            00242bb0cd70"&gt;<br />
+                            &lt;Name&gt;test form&lt;/Name&gt;<br />
+                            &lt;Status&gt;retired&lt;/Status&gt;<br />
+                            &lt;Version&gt;1&lt;/Version&gt;<br />
+                            &lt;SubmissionCount&gt;1&lt;/SubmissionCount&gt;<br />
+                            &lt;/Form&gt;<br />
+                            &lt;Form Id="2" OriginatingLibraryTemplateId="" GUID="f6167220-a09d-11df-8e32-
+                            00242bb0cd70"&gt;<br />
+                            &lt;Name&gt;second form&lt;/Name&gt;<br />
+                            &lt;Status&gt;published&lt;/Status&gt;<br />
+                            &lt;Version&gt;2&lt;/Version&gt;<br />
+                            &lt;SubmissionCount&gt;5&lt;/SubmissionCount&gt;<br />
+                            &lt;/Form&gt;<br />
+                            &lt;/CSVMetaData&gt;<br />
+                            &lt;/CanvasResult&gt;<br />
+                        </p>
+                     </div>
+                  </div>
+               </div>
             </div>
-            
-            <div class="api_group">
-                <div class="api_subgroup">
-                  <div class="api_groupleft">
-                      <a name="csv"></a>
+			
+			
+			
+			
+			
+			<div class="row row-eq-height">
+               <div class="col-sm-6 text-left">
+                  <div class="api_subgroup">
+                     <div class="api_groupleft">
+                       <a name="csv"></a>
                         <h1>CSV API</h1>
                         <a name="csv1"></a>
                         <h2>Description</h2>
@@ -312,15 +561,44 @@
                         <p>Resulting XML:</p>
                         <p>Post Payload with Dispatch List:</p>
                         <p>Resulting XML:</p>
+                     </div>
                   </div>
-                  
-                 </div>
+               </div>
+               <div class="col-sm-6 rhtsidenav">
+                  <div class="wells">
+                     <div class="api_groupright" id="forms_api_code">
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p class="api_header text-left">CSV API URL:</p>
+                        <p class="code">https://www.gocanvas.com/apiv2/csv.xml</p>
+                        <p class="api_header text-left">REST API Call Example:</p>
+                        <p class="code">https://www.gocanvas.com/apiv2/csv.xml?username=test@test.com&password=test_password&form_id=1&begin_second=962461752&end_second=1593613752</p>
+                        <p>&nbsp;</p>
+                        <p class="api_header text-left">Resulting image:</p>
+                        <p class="code">
+                        	"Start Date","End Date","Export App Name","Username","User Last Name","User First
+                            Name","Response ID","Response Date/Time","Device Date/Time","Submission Form
+                            Name","Submission Form Version"<br /><br />
+                            2000-07-26 00:00:00","2020-07-26 23:59:00","Form
+                            Name","test@test.com","Test","User","B9E3AB25-EAE3-4A55-9136-E7CC921ED01E","07/26/2011
+                            15:04:29","07/26/2011 15:04:09","Form Name"
+                        </p>
+                     </div>
+                  </div>
+               </div>
             </div>
-            
-            <div class="api_group">
-                <div class="api_subgroup">
-                  <div class="api_groupleft">
-                      <a name="dispatch"></a>
+			
+			
+			
+			
+			
+			
+			
+			<div class="row row-eq-height">
+               <div class="col-sm-6 text-left">
+                  <div class="api_subgroup">
+                     <div class="api_groupleft">
+                       <a name="dispatch"></a>
                         <h1>Dispatch Items API</h1>
                         <a name="dispatch1"></a>
                         <h2>Description</h2>
@@ -340,15 +618,87 @@
                         <a name="dispatch5"></a>
                         <h2>Examples</h2>
                         <p>REST API call to pull all submissions for a specific account:</p>
+                     </div>
                   </div>
-                  
-                 </div>
+               </div>
+               <div class="col-sm-6 rhtsidenav">
+                  <div class="wells">
+                     <div class="api_groupright" id="forms_api_code">
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p class="api_header text-left">Reference Data API URL:</p>
+                        <p class="code">https://www.gocanvas.com/apiv2/dispatch_items</p>
+                        <p class="api_header text-left">REST API Call Example:</p>
+                        <p class="code">https://www.gocanvas.com/apiv2/csv.xml?username=test@test.com&password=test_password&form_id=1&begin_second=962461752&end_second=1593613752</p>
+                        <p>&nbsp;</p>
+                        <p class="api_header text-left">Post Payload:</p>
+                        <p class="code">
+                        	&lt;?xml version="1.0" encoding="utf-8"?&gt;</br />
+                            &lt;List&gt;</br />
+                            &lt;DI FormName="Simpsons App" Description="#1 item" User="homer@mailinator.com"<br />
+                            ScheduleAt="01/23/2015 09:15" Department="Test Department"&gt;</br />
+                            &lt;DIEntry Label="first name" Value="Homer"/&gt;</br />
+                            &lt;DIEntry Label="last name" Value="Simpson"/&gt;</br />
+                            &lt;/DI&gt;</br />
+                            &lt;DI FormName=" Simpsons App"&gt;</br />
+                            &lt;DIEntry Label="first name" Value="Marge"/&gt;</br />
+                            &lt;DIEntry Label="age" Value="35"/&gt;</br />
+                            &lt;/DI&gt;</br />
+                            &lt;/List&gt;</br />
+                        </p>
+                        <p class="api_header text-left">Resulting XML:</p>
+                        <p class="code">
+                        	&lt;?xml version="1.0" encoding="utf-8"?&gt;</br />
+                            &lt;CanvasResult&gt;</br />
+                            &lt;/CanvasResult&gt;</br />
+                        </p>
+                        <p class="api_header text-left">Post Payload with Dispatch List:</p>
+                        <p class="code">
+                        	&lt;?xml version="1.0" encoding="utf-8"?&gt;</br />
+                            &lt;List&gt;</br />
+                            &lt;DI FormName="Your App" Description="1st item" User="myemail@email.com"&gt;</br />
+                            &lt;DIEntry Label="First Label" Value="1st value"/&gt;</br />
+                            &lt;DIEntry Label="Second Label" Value="2rd value"/&gt;</br />
+                            &lt;DIListItems&gt;</br />
+                            &lt;DIListItem&gt;</br />
+                            &lt;DIEntries&gt;</br />
+                            &lt;DIEntry Label="Name" Value="Tony Stark"/&gt;</br />
+                            &lt;DIEntry Label="Nick Name" Value="Iron Man"/&gt;</br />
+                            &lt;DIEntry Label="Occupation" Value="Super Hero"/&gt;</br />
+                            &lt;/DIEntries&gt;</br />
+                            &lt;/DIListItem&gt;</br />
+                            &lt;DIListItem&gt;</br />
+                            &lt;DIEntries&gt;</br />
+                            &lt;DIEntry Label="Name" Value="Bruce Banner"/&gt;</br />
+                            &lt;DIEntry Label="Nick Name" Value="Hulk"/&gt;</br />
+                            &lt;DIEntry Label="Occupation" Value="Super Hero"/&gt;</br />
+                            &lt;/DIEntries&gt;</br />
+                            &lt;/DIListItem&gt;</br />
+                            &lt;/DIListItems&gt;</br />
+                            &lt;/DI&gt;</br />
+                            &lt;/List&gt;</br />
+                        </p>
+                        <p class="api_header text-left">Resulting XML:</p>
+                        <p class="code">
+                        	&lt;?xml version="1.0" encoding="utf-8"?&gt;</br />
+                            &lt;CanvasResult&gt;</br />
+                            &lt;/CanvasResult&gt;</br />
+                        </p>
+                     </div>
+                  </div>
+               </div>
             </div>
-            
-            <div class="api_group">
-                <div class="api_subgroup">
-                  <div class="api_groupleft">
-                      <a name="push"></a>
+			
+			
+			
+			
+			
+			
+			<div class="row row-eq-height">
+               <div class="col-sm-6 text-left">
+                  <div class="api_subgroup">
+                     <div class="api_groupleft">
+                       <a name="push"></a>
                         <h1>Submission Push Notifications</h1>
                         <a name="push1"></a>
                         <h2>Description</h2>
@@ -372,14 +722,44 @@
                         <p>Once you've created your web service to handle the notifications we'll send you can try it out in the Canvas web interface. Visit the "Integration Options" section for the form for which you want to receive notifications, and click the "Integrate" button next to the "Custom Push Notifications" item. (Note that Canvas presently only allows one type of integration to be active per form at any given time, so if you already have an integration you'll have to delete it to set this up). Enter the fully-qualified URL of your web service end point including the scheme (which can be either http:// or https://), and optionally enter a tag you'd like us to include with your metadata. The tag can be any arbitrary text that will help you to identify or categorize submissions by form within your web service.</p>
                         <p>Once you've provided a URL (and, optionally, a tag), click the "Test" button. Canvas will send some sample metadata to the URL you've defined, and display the response for you so that you can see how your web service responded to the posted data. Canvas will display the status code, headers, and response body - if any - that we received from your web service. You can use this to determine whether your service is working as intended and make adjustments if you need to.</p>
                         <p>When you're satisfied that your service is responding as you intended, go ahead and hit the "Save" button to start receiving notifications when submissions are uploaded.</p>
+                     </div>
                   </div>
-                  
-                 </div>
+               </div>
+               <div class="col-sm-6 rhtsidenav">
+                  <div class="wells">
+                     <div class="api_groupright" id="forms_api_code">
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                        <p class="api_header text-left">For any given submission, Canvas will send the submission GUID, the name, ID, and guid of your<br />
+form, and will optionally include a tag that you define (see the "Setting Up" section below). This will<br />
+be contained within an XML document as the body of the HTTP POST. Here's an example:</p>
+                        <p class="code">
+                        	&lt;?xml version="1.0" encoding="UTF-8"?&gt;<br />
+                            &lt;submission_notification&gt;<br />
+                            &lt;form&gt;<br />
+                            &lt;id type="integer"&gt;1&lt;/id&gt;<br />
+                            &lt;name&gt;FORM_NAME&lt;/name&gt;<br />
+                            &lt;guid&gt;FORM_GUID&lt;/guid&gt;<br />
+                            &lt;tag&gt;Your Tag&lt;/tag&gt;<br />
+                            &lt;/form&gt;<br />
+                            &lt;submission&gt;<br />
+                            &lt;guid&gt;SUBMISSION_GUID&lt;/guid&gt;<br />
+                            &lt;/submission&gt;<br />
+                            &lt;/ submission_notification &gt;<br />
+                        </p>
+                     </div>
+                  </div>
+               </div>
             </div>
-<div class="api_group">
-                <div class="api_subgroup">
-                  <div class="api_groupleft">
-                      <a name="error"></a>
+			
+			
+			
+			<div class="row row-eq-height">
+               <div class="col-sm-6 text-left">
+                  <div class="api_subgroup">
+                     <div class="api_groupleft">
+                       <a name="error"></a>
                         <h1>Error Codes</h1>
                         <a name="error1"></a>
                         <h2>Description</h2>
@@ -395,67 +775,40 @@
                         <h2>Examples</h2>
                         <p>Example of an invalid webservice invocation (missing the required "id" parameter)</p>
                         <p>Result:</p>
+                     </div>
                   </div>
-                  
-                 </div>
-            </div>
-
-    </div>
-    <div class="col-sm-6 rhtsidenav">
-      <div class="wells">
-       <div class="language_selection">
-              
-                <input type="radio" name="language" id="curl" onclick="changeToCurl()" checked/>
-                <label for="curl" style="color: #d3d3d3">curl</label>
-                <input type="radio" name="language" id="ruby" onclick="changeToRuby()"/>
-                <label for="ruby" style="color: #d3d3d3">Ruby</label>
-                <input type="radio" name="language" id="python" onclick="changeToPython()"/>
-                <label for="python" style="color: #d3d3d3">Python</label>
-                <input type="radio" name="language" id="php" onclick="changeToPHP()" />
-                <label for="php" style="color: #d3d3d3">PHP</label>
-                <input type="radio" name="language" id="java" onclick="changeToJava()"/>
-                <label for="java" style="color: #d3d3d3">Java</label>
-                <input type="radio" name="language" id="node" onclick="changeToNode()"/>
-                <label for="node" style="color: #d3d3d3">Node</label>
-                <input type="radio" name="language" id="swift" onclick="changeToSwift()"/>
-                <label for="swift" style="color: #d3d3d3">Swift</label>
-                <input type="radio" name="language" id="cpp" onclick="changeToCpp()"/>
-                <label for="cpp" style="color: #d3d3d3">C++</label>
-                
-            </div>
-      </div>
-      <div class="wells">
-       <div class="api_groupright" id="forms_api_code">
-       <div class="api_groupright">
-                      <p>&nbsp;</p>
-                      <p class="text-left api_header">Offline Version of the API is available <a href="#">here</a></p>
-                    </div>
-
-                      <p>&nbsp;</p>
-                        <p>&nbsp;</p>
-                        <p>&nbsp;</p><p>&nbsp;</p>
+               </div>
+               <div class="col-sm-6 rhtsidenav">
+                  <div class="wells">
+                     <div class="api_groupright" id="forms_api_code">
                         <p>&nbsp;</p>
                         <p>&nbsp;</p>
-                        <p class="api_header text-left">Forms API URL:</p>
-                        <p class="code">https://www.gocanvas.com/apiv2/forms.xml</p>
-                        <p class="text-left api_header">REST API Call Example:</p>
-                        <p class="code">https://www.gocanvas.com/apiv2/forms.xml?username=test@test.com&password=test_password</p>
                         <p>&nbsp;</p>
-                        <p class="text-left api_header">Resulting XML:</p>
+                         <p class="api_header text-left">Example of an invalid webservice invocation (missing the required "id" parameter):</p>
+                        <p class="code">https://www.gocanvas.com/apiv2/images.xml?username=test@gocanvas.com@password=test</p>
+                        <p class="api_header text-left">Result:</p>
                         <p class="code">
-                            <span class="text_turquoise">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br />
-                            <span class="text_turquoise">&lt;CanvasResult&gt;</span><br />
-                            <span class="text_turquoise">&lt;Forms&gt;</span><br />
-                            <span class="text_turquoise">&lt;Form Id="1" OriginatingLibraryTemplateId="" GUID="f6167220-a09d-11df-8e32-
-                            00242bb0cd70"&gt;</span><br />
-                            <span class="text_turquoise">&lt;Name&gt;</span>test form<span class="text_turquoise">&lt;/Name&gt;</span><br />
-                            <span class="text_turquoise">&lt;Status&gt;</span>published<span class="text_turquoise">&lt;/Status&gt;</span><br />
-                            <span class="text_turquoise">&lt;Version&gt;</span>1<span class="text_turquoise">&lt;/Version&gt;</span><br />
-                            <span class="text_turquoise">&lt;/Form&gt;</span>
-                        </p>
-                    </div>
+                            &lt;?xml version="1.0" encoding="utf-8"?&gt;
+                            &lt;CanvasResult&gt;
+                            &lt;Error&gt;
+                            &lt;ErrorCode&gt;10&lt;/ErrorCode&gt;
+                            &lt;Description&gt;Required parameter is missing&lt;/Description&gt;
+                            &lt;/Error&gt;
+                            &lt;/CanvasResult&gt;
+						</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+			
+			
+			
+			
+			
+			
+			
+			
+         </div>
       </div>
-    </div>
-  </div>
-</div>
-</body></html>
+   </body>
+</html>
