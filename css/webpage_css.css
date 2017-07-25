@@ -126,6 +126,29 @@
     margin-right: 10px;
 }
 .api_header {
-    color: #d3d3d3;
+    color: #eee;
     padding-left: 10px;
   }
+  .import1 {
+    color: #AB3A55;
+  }
+  .import2 {
+    color: #9fc4eb;
+  }
+  .import3 {
+    color: yellow;
+  }
+  .import4 {
+    color: blue;
+  }
+ 
+  .text_turquoise {
+    color: #35c2d5;
+}
+
+.api_groupright {
+	color: #eee;
+	padding-left: 10px;
+	float: left;
+	word-break: break-word;
+}
