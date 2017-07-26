@@ -22,6 +22,5 @@ public class CSVMetaDataAPI_Simplified {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		System.out.println("xml response: " + stringBuilder);
 	}
 }
