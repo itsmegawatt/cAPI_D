@@ -6,9 +6,12 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <script src="js\Webpage_bootstrap_JS\webpage_bootstrap.js"></script>
       <link rel="stylesheet" type="text/css" href="css\webpage_css.css">
       <link rel="stylesheet" type="text/css" href="css\guide.css">
+      <link rel="stylesheet" href="plugins/highlight/styles/purebasic.css">
+      <script src="plugins/highlight/highlight.pack.js"></script>
+      <script src="js\Webpage_bootstrap_JS\webpage_bootstrap.js"></script>
+
    </head>
    <body>
       <div class="container-fluid text-center">
@@ -106,20 +109,12 @@
                   <div class="language_selection row">
                      <input type="radio" name="language" id="curl" onclick="changeToCurl()" checked/>
                      <label for="curl" style="color: #d3d3d3">curl</label>
-                     <input type="radio" name="language" id="ruby" onclick="changeToRuby()"/>
-                     <label for="ruby" style="color: #d3d3d3">Ruby</label>
-                     <input type="radio" name="language" id="python" onclick="changeToPython()"/>
-                     <label for="python" style="color: #d3d3d3">Python</label>
-                     <input type="radio" name="language" id="php" onclick="changeToPHP()" />
-                     <label for="php" style="color: #d3d3d3">PHP</label>
                      <input type="radio" name="language" id="java" onclick="changeToJava()"/>
                      <label for="java" style="color: #d3d3d3">Java</label>
-                     <input type="radio" name="language" id="node" onclick="changeToNode()"/>
-                     <label for="node" style="color: #d3d3d3">Node</label>
-                     <input type="radio" name="language" id="swift" onclick="changeToSwift()"/>
-                     <label for="swift" style="color: #d3d3d3">Swift</label>
-                     <input type="radio" name="language" id="cpp" onclick="changeToCpp()"/>
-                     <label for="cpp" style="color: #d3d3d3">C++</label>
+                     <input type="radio" name="language" id="python" onclick="changeToPython()"/>
+                     <label for="python" style="color: #d3d3d3">Python</label>
+                     <input type="radio" name="language" id="dotnet" onclick="changeToDotNet()"/>
+                     <label for="dotnet" style="color: #d3d3d3">.Net</label>
                   </div>
                </div>
             </div>
@@ -351,8 +346,6 @@
                   </div>
                </div>
             </div>
-			
-			
 			
 			<div class="row row-eq-height">
                <div class="col-sm-6 text-left">
@@ -812,4 +805,6 @@ be contained within an XML document as the body of the HTTP POST. Here's an exam
          </div>
       </div>
    </body>
+
+   <script>hljs.initHighlightingOnLoad();</script>
 </html>
